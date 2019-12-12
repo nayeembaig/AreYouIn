@@ -1,4 +1,4 @@
-import Ishita from "../../img/Ishita.jpg";
+import kun from "../../img/Kun.jpg";
 import Calendar from "../../assets/calendar.png";
 import "../../css/dashb.css";
 import React, { Fragment, useEffect, useState } from "react";
@@ -49,9 +49,9 @@ const Dashboard = ({
           <div class="welcome__block">
             <div>
         
-              <img src={Ishita} style={{width:"128px", height:"128px"}} />
+              <img src={kun} style={{width:"128px", height:"128px"}} />
               <div>
-                <h1>Hey There, {user && user.name}</h1> 
+                <h2>Hey There, {user && user.name}</h2> 
               </div>
             </div>
             <div>

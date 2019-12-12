@@ -15,21 +15,21 @@ export default class PaymentPages extends Component {
       render() {
       
         return (
-            <div>
+            <div style={{backgroundColor:"skyblue"}}>
             <Navbar></Navbar>
             <form class="credit-card">
             <div class="form-header">
-              <h4 class="title">Credit card detail</h4>
+              <h4 class="title" style={{textAlign:"center"}}><i class="fas fa-credit-card"></i> Payment Details</h4>
             </div>
            
             <div class="form-body">
             
-              <input type="text" class="card-number" placeholder="Card Number"/>
+              <input type="text" style={{width:"250px"}} className="card-number" placeholder="Card Number"/>
            
              
               <div class="date-field">
                 <div class="month">
-                  <select name="Month">
+                  <select name="Month"  style={{width:"125px"}}>
                     <option value="january">January</option>
                     <option value="february">February</option>
                     <option value="march">March</option>
@@ -45,7 +45,7 @@ export default class PaymentPages extends Component {
                   </select>
                 </div>
                 <div class="year">
-                  <select name="Year">
+                  <select name="Year"  style={{width:"125px"}}>
                     <option value="2016">2016</option>
                     <option value="2017">2017</option>
                     <option value="2018">2018</option>
@@ -63,14 +63,16 @@ export default class PaymentPages extends Component {
                 <div class="cvv-input">
                   <input type="text" placeholder="CVV"/>
                 </div>
-                <div class="cvv-details">
-                  <p>3 or 4 digits usually found <br/> on the signature strip</p>
+                <div class="cvv-details" style={{width:"80px"}}>
+                  {/* <p>3 or 4 digits usually found <br/> on the signature strip</p> */}
                 </div>
               </div>
-            
-          
-              <button type="submit" class="proceed-btn"><a href="#">Proceed</a></button>
-              <button type="submit" class="paypal-btn"><a href="#">Pay With</a></button>
+            <hr></hr>
+          <br></br>
+          <center>
+              <button type="submit"  style={{width:"250px", marginTop:"40px"}} class="proceed-btn"><a href="#">Proceed</a></button>
+              </center>
+              {/* <button type="submit" class="paypal-btn"><a href="#">Pay With</a></button> */}
             </div>
           </form>
                </div>   

@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Moment from 'react-moment';
 import { deleteComment } from '../../actions/post';
-
+import duck from "../../img/duck.jpg";
+import wolf from "../../img/wolf.png";
+import panda from "../../img/panda.png";
+const imgArray = [panda, duck,wolf]
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faCog } from   '@fortawesome/free-solid-svg-icons';
 
@@ -25,7 +28,7 @@ const CommentItem = ({
      
      <div class="message-header">
        <div class="header-image">
-         <img src="https://mjmao93648.i.lithium.com/t5/image/serverpage/image-id/12183i65F6690CCF8E041D/image-dimensions/150x150/image-coordinates/436%2C15%2C1312%2C891?v=1.0" width="40" alt="Shay" title="Shay" />
+       <img src={imgArray[Math.floor((Math.random() * 3) )]} width="40" alt="duck" title="duck" />
        </div>
        <div class="header-info">
          <div class="user-details">

@@ -89,10 +89,10 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </Link>
       </li>
 
-      
+     
       <li class="nav-item dropdown">
         <a
-        style={{zIndex:"1000"}}
+        style={{zIndex:"1000", marginTop:"-5px"}}
           class="nav-link dropdown-toggle"
           href="#"
           id="navbarDropdownMenuLink"
@@ -106,12 +106,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           class="dropdown-menu u dropdown-menu-right bg-dark"
           aria-labelledby="navbarDropdownMenuLink"
         >
-           <li>
-        <Link to='/SearchEvents'>
-          {/* <i className='fas fa-user' />{' '} */}
-          <span className='hide-sm'>Chat</span>
-        </Link>
-     </li>
+         
        
           <li>
           <Link to="/SearchVenue">
