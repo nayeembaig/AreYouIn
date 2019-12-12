@@ -30,7 +30,7 @@ export default class Paymentvenues extends Component {
 
   componentDidMount() {
     console.log(this.props.match.params.id)
-axios.get('http://localhost:5000/api/auth/confirmationss/'+this.props.match.params.id)
+axios.get('https://iuinevents.herokuapp.com/api/auth/confirmationss/'+this.props.match.params.id)
  .then(response => {
    this.setState({ 
      venuename : response.data[0].name,
@@ -50,7 +50,7 @@ axios.get('http://localhost:5000/api/auth/confirmationss/'+this.props.match.para
     e.preventDefault();
     //console.log(exercise);
        console.log(this.state.email)
-    axios.post('http://localhost:5000/api/auth/confirmatio', {email: this.state.email,
+    axios.post('https://iuinevents.herokuapp.com/api/auth/confirmatio', {email: this.state.email,
     venuename :this.state.venuename})
     .then(response => {
        console.log(response.data)
@@ -202,7 +202,7 @@ export default class Paymentvenues extends Component {
 
   componentDidMount() {
     console.log(this.props.match.params.id)
-axios.get('http://localhost:5000/api/auth/confirmationss/'+this.props.match.params.id)
+axios.get('https://iuinevents.herokuapp.com/api/auth/confirmationss/'+this.props.match.params.id)
  .then(response => {
    this.setState({ 
      venuename : response.data[0].name,
@@ -225,7 +225,7 @@ axios.get('http://localhost:5000/api/auth/confirmationss/'+this.props.match.para
     e.preventDefault();
     //console.log(exercise);
        console.log(this.state.email)
-    axios.post('http://localhost:5000/api/auth/confirmatio', {email: this.state.email,
+    axios.post('https://iuinevents.herokuapp.com/api/auth/confirmatio', {email: this.state.email,
     venuename :this.state.venuename, timeslot: this.state.timeslot})
     .then(response => {
        console.log(response.data)

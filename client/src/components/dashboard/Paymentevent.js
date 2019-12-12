@@ -31,7 +31,7 @@ export default class Paymentevents extends Component {
     console.log(this.props.match.params.id);
     axios
       .get(
-        "http://localhost:5000/api/auth/confirmations/" +
+        "https://iuinevents.herokuapp.com/api/auth/confirmations/" +
           this.props.match.params.id
       )
       .then(response => {
@@ -55,7 +55,7 @@ export default class Paymentevents extends Component {
     console.log(this.props.match.params.id);
     //  alert(this.state.activityname)
     axios
-      .post("http://localhost:5000/api/auth/confirmation", {
+      .post("https://iuinevents.herokuapp.com/api/auth/confirmation", {
         email: this.state.email,
         activityname: this.state.activityname,
         event_id: this.props.match.params.id,

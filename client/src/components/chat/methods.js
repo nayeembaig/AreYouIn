@@ -87,10 +87,10 @@ function connectToChatkit(event) {
   });
 
   axios
-    .post('http://localhost:5000/users', { userId })
+    .post('https://iuinevents.herokuapp.com/users', { userId })
     .then(() => {
       const tokenProvider = new Chatkit.TokenProvider({
-        url: 'http://localhost:5000/authenticate',
+        url: 'https://iuinevents.herokuapp.com/authenticate',
       });
 
       const chatManager = new Chatkit.ChatManager({

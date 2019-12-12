@@ -90,15 +90,15 @@ export default class RegisteredEvent extends Component {
   componentDidMount() {
     console.log(this.props.match.params.id)
     
-    axios.get('http://localhost:5000/api/auth/regievent/'+ this.props.match.params.id)
+    axios.get('https://iuinevents.herokuapp.com/api/auth/regievent/'+ this.props.match.params.id)
       .then(response => {
-        axios.put('http://localhost:5000/api/auth/getevent',{activitynames:response.data[0].activityname})
+        axios.put('https://iuinevents.herokuapp.com/api/auth/getevent',{activitynames:response.data[0].activityname})
         .then(respons=>{
           this.setState({
             events: respons.data
           })
         })
-        axios.put('http://localhost:5000/api/auth/getvenue',{venuenames:response.data[0].venuename})
+        axios.put('https://iuinevents.herokuapp.com/api/auth/getvenue',{venuenames:response.data[0].venuename})
         .then(response=>{
           this.setState({
             venue: response.data

@@ -76,7 +76,7 @@ export default class SearchPeople extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/api/auth/people')
+    axios.get('https://iuinevents.herokuapp.com/api/auth/people')
       .then(response => {
         this.setState({ events: response.data })
       })
@@ -113,7 +113,7 @@ export default class SearchPeople extends Component {
     e.preventDefault();
     //console.log(exercise);
        console.log(this.state.searchme)
-    axios.put('http://localhost:5000/api/auth/peoplesearch', {searchme: this.state.searchme})
+    axios.put('https://iuinevents.herokuapp.com/api/auth/peoplesearch', {searchme: this.state.searchme})
     .then(response => {
       this.setState({ events: response.data })
     })

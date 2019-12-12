@@ -21,7 +21,7 @@ export default class confirmationvenues extends Component {
 
   componentDidMount() {
     console.log(this.props.match.params.id)
-axios.get('http://localhost:5000/api/auth/confirmationss/'+this.props.match.params.id)
+axios.get('https://iuinevents.herokuapp.com/api/auth/confirmationss/'+this.props.match.params.id)
  .then(response => {
    this.setState({ 
     venuename : response.data[0].name,

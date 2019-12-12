@@ -60,9 +60,9 @@ export default class Waitinglistevent extends Component {
   componentDidMount() {
     console.log(this.props.match.params.id)
     
-    axios.get('http://localhost:5000/api/auth/regievent/'+ this.props.match.params.id)
+    axios.get('https://iuinevents.herokuapp.com/api/auth/regievent/'+ this.props.match.params.id)
       .then(response => {
-        axios.put('http://localhost:5000/api/auth/getwaitl',{activitynames:response.data[0].Waitinglistevent})
+        axios.put('https://iuinevents.herokuapp.com/api/auth/getwaitl',{activitynames:response.data[0].Waitinglistevent})
         .then(respons=>{
           this.setState({
             events: respons.data

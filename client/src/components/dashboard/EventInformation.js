@@ -51,7 +51,7 @@ export default class EventInformation extends Component {
 
   componentDidMount() {
          console.log(this.props.match.params.id)
-    axios.get('http://localhost:5000/api/auth/show/'+this.props.match.params.id)
+    axios.get('https://iuinevents.herokuapp.com/api/auth/show/'+this.props.match.params.id)
       .then(response => {
         this.setState({ events: response.data,
           name : response.data[0].name,
@@ -90,7 +90,7 @@ export default class EventInformation extends Component {
   onsubmit(e){
     e.preventDefault();
    
-    axios.post('http://localhost:5000/api/auth/capacity',{capacity: this.state.capacity -1,name:this.state.name})
+    axios.post('https://iuinevents.herokuapp.com/api/auth/capacity',{capacity: this.state.capacity -1,name:this.state.name})
     .then(response => {
      console.log(response.data);
      

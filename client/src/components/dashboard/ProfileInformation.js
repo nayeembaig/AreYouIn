@@ -39,7 +39,7 @@ export default class ProfileInformation extends Component {
 
   componentDidMount() {
          console.log(this.props.match.params.id)
-    axios.get('http://localhost:5000/api/auth/gotoprofile/'+this.props.match.params.id)
+    axios.get('https://iuinevents.herokuapp.com/api/auth/gotoprofile/'+this.props.match.params.id)
       .then(response => {
         this.setState({ 
           events: response.data,
@@ -52,7 +52,7 @@ export default class ProfileInformation extends Component {
       
   }/*
   registerchange(e){
-    axios.put('http://localhost:5000/api/auth/shows', {name: this.state.name})
+    axios.put('https://iuinevents.herokuapp.com/api/auth/shows', {name: this.state.name})
     .then(response => {
       console.log(response.data);
     })

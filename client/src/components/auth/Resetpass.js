@@ -21,7 +21,7 @@ const Resetpass = ({ setAlert,isAuthenticated}) => {
   const onSubmit = async e => {
     e.preventDefault();
    
-        axios.put('http://localhost:5000/api/auth/updatess', 
+        axios.put('https://iuinevents.herokuapp.com/api/auth/updatess', 
         { email : email,
         password: password})
            .then(response =>{

@@ -96,7 +96,7 @@ export default class SearchVenue extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/api/auth/venues")
+      .get("https://iuinevents.herokuapp.com/api/auth/venues")
       .then(response => {
         this.setState({ events: response.data });
       })
@@ -113,7 +113,7 @@ export default class SearchVenue extends Component {
     this.setState({ type: e.target.value });
     console.log(this.state.type);
     axios
-      .put("http://localhost:5000/api/auth/venuestype", {
+      .put("https://iuinevents.herokuapp.com/api/auth/venuestype", {
         type: e.target.value
       })
       .then(response => {
@@ -127,7 +127,7 @@ export default class SearchVenue extends Component {
     this.setState({ location: e.target.value });
     console.log(this.state.location);
     axios
-      .put("http://localhost:5000/api/auth/veneslocation", {
+      .put("https://iuinevents.herokuapp.com/api/auth/veneslocation", {
         location: e.target.value
       })
       .then(response => {
@@ -158,7 +158,7 @@ export default class SearchVenue extends Component {
     e.preventDefault();
     //console.log(exercise);
        console.log(this.state.searchme)
-    axios.put('http://localhost:5000/api/auth/venuessearch', {searchme: this.state.searchme})
+    axios.put('https://iuinevents.herokuapp.com/api/auth/venuessearch', {searchme: this.state.searchme})
     .then(response => {
       this.setState({ events: response.data })
     })

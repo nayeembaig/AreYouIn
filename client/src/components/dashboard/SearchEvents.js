@@ -106,7 +106,7 @@ export default class SearchEvents extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/api/auth/show")
+      .get("https://iuinevents.herokuapp.com/api/auth/show")
       .then(response => {
         this.setState({ events: response.data });
         // for i = 0 to n
@@ -126,7 +126,7 @@ export default class SearchEvents extends Component {
     this.setState({ type: e.target.value });
     console.log(this.state.type);
     axios
-      .put("http://localhost:5000/api/auth/shows", { type: e.target.value })
+      .put("https://iuinevents.herokuapp.com/api/auth/shows", { type: e.target.value })
       .then(response => {
         this.setState({ events: response.data });
       })
@@ -138,7 +138,7 @@ export default class SearchEvents extends Component {
     this.setState({ location: e.target.value });
     console.log(this.state.location);
     axios
-      .put("http://localhost:5000/api/auth/locations", {
+      .put("https://iuinevents.herokuapp.com/api/auth/locations", {
         location: e.target.value
       })
       .then(response => {
@@ -152,7 +152,7 @@ export default class SearchEvents extends Component {
     this.setState({ age: e.target.value });
     console.log(this.state.age);
     axios
-      .put("http://localhost:5000/api/auth/ages", { age: e.target.value })
+      .put("https://iuinevents.herokuapp.com/api/auth/ages", { age: e.target.value })
       .then(response => {
         this.setState({ events: response.data });
       })
@@ -189,7 +189,7 @@ export default class SearchEvents extends Component {
     //console.log(exercise);
     console.log(this.state.searchme);
     axios
-      .put("http://localhost:5000/api/auth/showss", {
+      .put("https://iuinevents.herokuapp.com/api/auth/showss", {
         searchme: this.state.searchme
       })
       .then(response => {

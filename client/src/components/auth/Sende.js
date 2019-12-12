@@ -23,7 +23,7 @@ const Sende = ({ setAlert,isAuthenticated}) => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    axios.post('http://localhost:5000/api/auth/sendss', {email: email,question1:question1,question2:question2,answer1:answer1,answer2:answer2})
+    axios.post('https://iuinevents.herokuapp.com/api/auth/sendss', {email: email,question1:question1,question2:question2,answer1:answer1,answer2:answer2})
            .then(response =>{
                if(response.data ==='your question or answer is wrong'){
                  alert('your question or answer is wrong, try again')

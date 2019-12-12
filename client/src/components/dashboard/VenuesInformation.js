@@ -56,7 +56,7 @@ export default class VenuesInformation extends Component {
       var newRatingRaw = (this.state.RatingRaw + newRating)
       var newRatingRound = (newRatingRaw)/(this.state.UsersWhoRated.length + 1)
       console.log("Rating", newRatingRound)
-      axios.post('http://localhost:5000/api/auth/rating',{Rating: newRatingRound, name: this.state.name, NewRater: UserID, TotalRating: newRatingRaw})
+      axios.post('https://iuinevents.herokuapp.com/api/auth/rating',{Rating: newRatingRound, name: this.state.name, NewRater: UserID, TotalRating: newRatingRaw})
       .then(response => {
       console.log(response.data);
       })
@@ -66,7 +66,7 @@ export default class VenuesInformation extends Component {
 
   componentDidMount() {
          console.log(this.props.match.params.id)
-    axios.get('http://localhost:5000/api/auth/venues/'+this.props.match.params.id)
+    axios.get('https://iuinevents.herokuapp.com/api/auth/venues/'+this.props.match.params.id)
       .then(response => {
         this.setState({ events: response.data,
           name : response.data[0].name,
@@ -104,7 +104,7 @@ export default class VenuesInformation extends Component {
   onSubmit(e){
     e.preventDefault();
     axios
-      .put("http://localhost:5000/api/auth/removetimeslot", {
+      .put("https://iuinevents.herokuapp.com/api/auth/removetimeslot", {
         name: this.state.name, Timeslot1: this.state.Timeslot1
       })
       this.setState({radito:true});

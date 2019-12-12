@@ -20,7 +20,7 @@ export default class WaitingConfirm extends Component {
 
   componentDidMount() {
     console.log(this.props.match.params.id)
-axios.get('http://localhost:5000/api/auth/confirmations/'+this.props.match.params.id)
+axios.get('https://iuinevents.herokuapp.com/api/auth/confirmations/'+this.props.match.params.id)
  .then(response => {
    this.setState({ 
      activityname : response.data[0].name,

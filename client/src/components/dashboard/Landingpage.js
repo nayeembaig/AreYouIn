@@ -96,7 +96,7 @@ export default class Landingpage extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/api/auth/show")
+      .get("https://iuinevents.herokuapp.com/api/auth/show")
       .then(response => {
         this.setState({ events: response.data });
       })
@@ -104,7 +104,7 @@ export default class Landingpage extends Component {
         console.log(error);
       });
       axios
-      .put("http://localhost:5000/api/auth/locationbloomington", {
+      .put("https://iuinevents.herokuapp.com/api/auth/locationbloomington", {
         location: "Bloomington"
       })
       .then(response => {
@@ -114,7 +114,7 @@ export default class Landingpage extends Component {
         console.log(error);
       });
     axios
-      .get("http://localhost:5000/api/auth/venues")
+      .get("https://iuinevents.herokuapp.com/api/auth/venues")
       .then(response => {
         this.setState({ event: response.data });
       })
@@ -123,7 +123,7 @@ export default class Landingpage extends Component {
       });
 
     axios
-      .get("http://localhost:5000/api/auth/locations")
+      .get("https://iuinevents.herokuapp.com/api/auth/locations")
       .then(response => {
         this.setState({ events: response.data });
       })
@@ -141,7 +141,7 @@ export default class Landingpage extends Component {
     this.setState({ location: this.state.location });
     console.log(this.state.location);
     axios
-      .put("http://localhost:5000/api/auth/locations", {
+      .put("https://iuinevents.herokuapp.com/api/auth/locations", {
         location: this.state.location
       })
       .then(response => {

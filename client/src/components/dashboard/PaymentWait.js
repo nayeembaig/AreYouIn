@@ -27,7 +27,7 @@ export default class PaymentWait extends Component {
 
   componentDidMount() {
     console.log(this.props.match.params.id)
-axios.get('http://localhost:5000/api/auth/confirmations/'+this.props.match.params.id)
+axios.get('https://iuinevents.herokuapp.com/api/auth/confirmations/'+this.props.match.params.id)
  .then(response => {
    this.setState({ 
      activityname : response.data[0].name,
@@ -48,12 +48,12 @@ axios.get('http://localhost:5000/api/auth/confirmations/'+this.props.match.param
     //console.log(exercise);
        console.log(this.props.match.params.id)
       //  alert(this.state.activityname)
-    axios.post('http://localhost:5000/api/auth/getintowaitlist', {email: this.state.email,
+    axios.post('https://iuinevents.herokuapp.com/api/auth/getintowaitlist', {email: this.state.email,
    activityname :this.state.activityname})
     .then(response => {
        console.log(response.data)
     });
-    axios.post('http://localhost:5000/api/auth/getwait', {email: this.state.email,
+    axios.post('https://iuinevents.herokuapp.com/api/auth/getwait', {email: this.state.email,
     activityname :this.state.activityname})
      .then(response => {
         console.log(response.data)

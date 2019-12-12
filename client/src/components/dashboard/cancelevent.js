@@ -49,7 +49,7 @@ export default class cancelevent extends Component {
     e.preventDefault();
     //console.log(exercise);
        console.log(this.state.email)
-    axios.post('http://localhost:5000/api/auth/cancel', {email: this.state.email,
+    axios.post('https://iuinevents.herokuapp.com/api/auth/cancel', {email: this.state.email,
    activityname :this.state.activityname})
     .then(response => {
        console.log(response.data)
@@ -58,7 +58,7 @@ export default class cancelevent extends Component {
            showmessage:false
        })
     });
-    axios.post('http://localhost:5000/api/auth/capacity1',{capacity: this.state.capacity +1,activityname:this.state.activityname})
+    axios.post('https://iuinevents.herokuapp.com/api/auth/capacity1',{capacity: this.state.capacity +1,activityname:this.state.activityname})
     .then(response => {
      console.log(response.data);
      
@@ -68,7 +68,7 @@ export default class cancelevent extends Component {
     });
     console.log(this.state.firstperson[0])
     if(this.state.firstperson != ''){
-   axios.post('http://localhost:5000/api/auth/postemail', {firstperson: this.state.firstperson[0],
+   axios.post('https://iuinevents.herokuapp.com/api/auth/postemail', {firstperson: this.state.firstperson[0],
    activityname :this.state.activityname})
     .then(response => {
        console.log(response.data)
@@ -77,7 +77,7 @@ export default class cancelevent extends Component {
            showmessage:false
        })
     });
-    axios.post('http://localhost:5000/api/auth/droppeople', {
+    axios.post('https://iuinevents.herokuapp.com/api/auth/droppeople', {
     activityname :this.state.activityname})
      .then(response => {
         console.log(response.data)
