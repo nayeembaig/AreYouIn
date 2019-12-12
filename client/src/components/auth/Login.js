@@ -2,6 +2,8 @@ import React, { Fragment, useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import FacebookLogin from 'react-facebook-login';
+import GoogleLogin from 'react-google-login';
 import { login } from "../../actions/auth";
 import "../../css/forms.css";
 // import '../../css/buttons.css'
@@ -30,6 +32,18 @@ const Login = ({ login, isAuthenticated }) => {
       return <Redirect to="/dashboard" />;
     }
   }
+  
+    const responseGoogle = (res) => {
+    console.log(res);
+    login(window.localStorage.getItem("emailID"), "ishitakumar");
+  }
+
+  const responseFacebook = (response) => {
+    console.log(response);
+    if(response)
+	login(window.localStorage.getItem("emailID"), "ishitakumar");
+
+}
 
   return (
     <Fragment>
@@ -87,6 +101,30 @@ const Login = ({ login, isAuthenticated }) => {
                   <p className="forgot">
                     Forget your password <Link to="/Sende">Reset Password</Link>
                   </p>
+				  
+				  
+				  <GoogleLogin
+				  clientId="279742822832-ruqqjhue6gobnbjl3nc6dclbq7gvht7r.apps.googleusercontent.com"
+				  //googleClientId="279742822832-ruqqjhue6gobnbjl3nc6dclbq7gvht7r.apps.googleusercontent.com"
+				  onSuccess={responseGoogle}
+				  width={500}
+				  height={40}
+				  className="btn btn-outline-danger mt-20"
+				  >
+				  <span>Sign in using Google</span>
+					 
+				  </GoogleLogin>
+					<br/><br/>
+				  <FacebookLogin
+				appId="2439972026111073"
+				autoLoad={false}
+				fields="name,email,picture"
+				/*className="btn btn-outline-danger mt-4" */
+				data-size="medium"
+				callback={(response)=>responseFacebook(response)}
+				cssClass= "my-facebook-button-class"
+				icon="fa-facebook "
+				/>
                 </form>
               </div>
             </div>
