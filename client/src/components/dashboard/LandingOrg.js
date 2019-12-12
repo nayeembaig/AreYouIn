@@ -122,8 +122,9 @@ export default class LandingOrg extends Component {
     return (
       <div className="">
         <Navbar></Navbar>
+        <br></br>
         <div className="container no-margin">
-          <table className="table  table-hover" style={{ tablelayout: "fixed" }}>
+          <table className="table  table-info table-hover" style={{ tablelayout: "fixed" }}>
             <thead className="thead-light" >
               <tr>
                 <th>
@@ -148,7 +149,7 @@ export default class LandingOrg extends Component {
                     <td style={{ width: "100px" }}> {event.status}</td>
                     <td style={{ width: "100px" }}>
                       {" "}
-                      {event.attendees.join(", ")}
+                      {event.attendees.join(" ")}
                     </td>
                     <td style={{ width: "100px" }}>
                       {" "}

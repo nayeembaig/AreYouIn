@@ -5,6 +5,9 @@ import Moment from "react-moment";
 import { connect } from "react-redux";
 import { addLike, removeLike, deletePost } from "../../actions/post";
 import duck from "../../img/duck.jpg";
+import wolf from "../../img/wolf.png";
+import panda from "../../img/panda.png";
+const imgArray = [panda, duck,wolf]
 const PostItem = ({
   addLike,
   removeLike,
@@ -26,7 +29,7 @@ const PostItem = ({
 
       {/* </p> */}
 
-      <div class="container my-2">
+      <div class="container text-center">
         <div
           class="message-container"
           style={{
@@ -41,7 +44,7 @@ const PostItem = ({
               <div class="message-content">
                 <div class="message-header mr-0">
                   <div class="header-image">
-                    <img src={duck} width="40" alt="duck" title="duck" />
+                    <img src={imgArray[Math.floor((Math.random() * 3) )]} width="40" alt="duck" title="duck" />
                   </div>
                   <div class="header-info">
                     <div class="user-details">
@@ -65,8 +68,8 @@ const PostItem = ({
                               <button
                                 onClick={() => deletePost(_id)}
                                 type="button"
-                                className="btn btn-light"
-                                style={{ backgroundColor: "transparent" }}
+                               
+                                style={{ width:"20px",height:'30px',backgroundColor: "transparent" }}
                               >
                                 <bold>X</bold>
                               </button>
@@ -89,7 +92,8 @@ const PostItem = ({
                   style={{
                     marginLeft: "630px",
                     color: "white",
-                    backgroundColor: "lightblue"
+                    backgroundColor: "lightblue",
+                    height:"30px"
                   }}
                   onClick={() => addLike(_id)}
                   type="button"
@@ -99,7 +103,7 @@ const PostItem = ({
                   <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
                 </button>
                 <button
-                  style={{ color: "white", backgroundColor: "lightblue" }}
+                  style={{ color: "white", backgroundColor: "lightblue" , height:"30px"}}
                   onClick={() => removeLike(_id)}
                   type="button"
                   className="btn btn-light"
@@ -112,11 +116,13 @@ const PostItem = ({
                   style={{
                     color: "white",
                     border: "None",
-                    backgroundColor: "lightblue"
+                    backgroundColor: "lightblue",
+                    height:"30px"
+
                   }}
                   className="btn btn-primary"
                 >
-                  Discussion{" "}
+                <i class="far fa-comments"></i>{" "}
                   {comments.length > 0 && (
                     <span className="comment-count">{comments.length}</span>
                   )}
