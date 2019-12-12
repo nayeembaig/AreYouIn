@@ -198,15 +198,16 @@ export default class SearchEvents extends Component {
     return (
       <div>
         <Navbar></Navbar>
-        <Carousel style={{ marginTop: "-10px" }}></Carousel>
+        <div>
+        <Carousel style={{ marginTop: "-20px" }}></Carousel>
+        </div>
         <div
-          className="container  no-margin text-center"
-          style={{ marginTop: "20px" }}
+       
         >
           <div className="row">
             <div className="col">
               <div className="container" style={{ marginTop: "2px" }}>
-                <form onSubmit={this.onSubmit}>
+              <form class="search-container" onSubmit={this.onSubmit}>
                   <input
                     type="text"
                     id="search-bar"
@@ -215,7 +216,7 @@ export default class SearchEvents extends Component {
                     name="searchme"
                     onChange={this.searchh}
                   ></input>
-              <button type="button" class="btn btn-default" style={{border:"None"}} value="Send">
+          <button type="button" class="btn btn-default" style={{border:"None"}} value="Send">
     <span class="glyphicon glyphicon-search" ></span>  
   </button>
                 </form>

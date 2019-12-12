@@ -1,6 +1,6 @@
 @importxt-bold "~@fullcalendar/core/main.css";
 @import "~@fullcalendar/daygrid/main.css";
-
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
 /* Global Styles */
 :root {
   --secondary-color: #000000;

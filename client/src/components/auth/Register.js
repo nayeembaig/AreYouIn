@@ -90,7 +90,7 @@ const Register = ({ setAlert,register,isAuthenticated}) => {
       
           <input
             type='email'
-            style={{ height: "35px", marginBottom:"10px" }}
+            style={{ height: "35px",border:"none", marginBottom:"10px" }}
             placeholder='Email Address'
             name='email'
             value={email}
@@ -100,7 +100,7 @@ const Register = ({ setAlert,register,isAuthenticated}) => {
     
           <input
             type='password'
-            style={{ height: "35px",marginBottom:"10px" }}
+            style={{ height: "35px",border:"none",marginBottom:"10px" }}
             placeholder='Password'
             name='password'
             value={password}
@@ -110,20 +110,20 @@ const Register = ({ setAlert,register,isAuthenticated}) => {
        
           <input
             type='password'
-            style={{ height: "35px", marginBottom:"10px" }}
+            style={{ height: "35px",border:"none", marginBottom:"10px" }}
             placeholder='Confirm Password'
             name='password2'
             value={password2}
             onChange={e => onChange(e)}
           />
 
-        <select value={type_of_user} className='input2'  style={{ height: "35px", marginBottom:"10px" }} name='type_of_user' onChange={e => onChange(e)}>
+        <select value={type_of_user} className='input2'  style={{textAlign:"center",border:"none", height: "35px", marginBottom:"10px" }} name='type_of_user' onChange={e => onChange(e)}>
           <option value='Attendee'>Attendee</option>
           <option value='Organizer'>Organizer</option>
         </select>
        
         {/* <legend><span class="number">2</span>Security Questions</legend> */}
-        <select value={question1} className='input2'style={{ height: "35px", marginBottom:"10px" }} name='question1' onChange={e => onChange(e)}>
+        <select value={question1} className='input2'style={{ border:"none",height: "35px", marginBottom:"10px" }} name='question1' onChange={e => onChange(e)}>
         <option value='0'>Select Security Question</option>
           <option value='Your First Pets Name'>Your First Pets Name</option>
           <option value='Your Fathers first Name'>Your Fathers first Name</option>
@@ -172,10 +172,12 @@ const Register = ({ setAlert,register,isAuthenticated}) => {
 
 
         <input type='submit' style={{
-                      height: "35px",
-                      marginTop:"20px",
-                      width: "30%",
-                      backgroundColor: "#17a2b8"}} value='Register' />
+                     height: "35px",
+                     marginTop:"20px",
+                     width: "30%",
+                     backgroundColor: "#17a2b8",
+                     fontSize:"1.2rem",
+                     color:"black"}} value='Register' />
         {/* <input type='submit' className='button1' value='Register' /> */}
         <p className='forgot'  style={{
                       color:"black"}}>

@@ -179,6 +179,26 @@ export default class Landingpage extends Component {
         <div style={{marginTop:"20px"}}>
           <Carousel3 ></Carousel3>
           <br></br>
+          <div class="container-fluid">
+    <div class="row">
+        <div class="col-6 mt-3">
+            <div class="card">
+                <div class="card-horizontal" style={{  display: "flex",
+    flex: "1 1 auto"}}>
+                    <div class="img-square-wrapper">
+                        <img class="" src="http://via.placeholder.com/300x180" alt="Card image cap"/>
+                    </div>
+                    <div class="card-body">
+                        {/* <h4 class="card-title">Card title</h4> */}
+                        <p class="card-text">Browse All Events</p>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+</div>
+          <br></br>
           <div style={{padding:"20px"}}>
           <h4 style={{textAlign:"center"}}>Events Near you </h4>
           <Carousel></Carousel>

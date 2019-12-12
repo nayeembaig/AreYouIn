@@ -51,7 +51,7 @@
     background: var(--light-color);
   } */
 
-  @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
+ 
   
 
 .login{
@@ -154,7 +154,7 @@
   background:white;
   border: none;
   border-radius:5px;
-  text-align:center;
+  text-align:center !important;
   color:grey;
   font-family: 'Quicksand', sans-serif;
 }
@@ -205,26 +205,15 @@
   margin-left:10%;
   margin-right:10%;
   /* margin-top:10%; */
-  font-size:20px;
+  font-size:30px;
   border-radius:5px;
   text-align:center;
   color:white;
   line-height:32px;
-  font-family: 'Quicksand', sans-serif;
+  /* font-family: 'Quicksand', sans-serif; */
   opacity:0.8;
 }
-.bouton:hover{
-  /* background:DarkSalmon; */
-}
-/* h1{
-  color:white;
-  font-family: Futura, Quicksand;
-  text-align:center;
-  position:absolute;
-  margin:42px;
-  top:12px;
-  font-size:30px;
-} */
+
 .forgot{
   /* color:white; */
   text-align:center;

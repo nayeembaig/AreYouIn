@@ -38,7 +38,7 @@ const Login = ({ login, isAuthenticated }) => {
         <div className="formslayout2-inner">
           <div class="page">
             <div class="login">
-              <div class="formulaire">
+              <div class="">
                 <h1
                   class="text-center"
                   style={{ marginTop: "20px", marginLeft: "80px" }}
@@ -48,7 +48,7 @@ const Login = ({ login, isAuthenticated }) => {
 
                 <form onSubmit={e => onSubmit(e)}>
                   <input
-                    style={{ color:"black",height: "35px", widht: "90%" }}
+                    style={{ color:"black",border:"none",height: "35px", widht: "90%" }}
                     type="email"
                     placeholder="Email Address"
                     name="email"
@@ -58,7 +58,7 @@ const Login = ({ login, isAuthenticated }) => {
                   />
 
                   <input
-                    style={{ height: "35px" ,marginTop:"20px" }}
+                    style={{ height: "35px",border:"none" ,marginTop:"20px" }}
                     type="password"
                     placeholder="Password"
                     name="password"
@@ -73,9 +73,12 @@ const Login = ({ login, isAuthenticated }) => {
                       height: "35px",
                       marginTop:"20px",
                       width: "30%",
-                      backgroundColor: "#17a2b8"
+                      backgroundColor: "#17a2b8",
+                      fontSize:"1.2rem",
+                      color:"black"
+                      
                     }}
-                    className="bouton"
+                   
                     value="Login"
                   />
                   <p className="forgot">
