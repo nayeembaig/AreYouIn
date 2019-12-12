@@ -327,9 +327,9 @@ button {
   max-height: 600px;
   margin: auto;
   overflow: hidden;
-  padding: 0 2rem;
-  margin-top: 6rem;
-  margin-bottom: 3rem;
+  /* padding: 0 2rem; */
+  /* margin-top: 6rem; */
+  /* margin-bottom: 3rem; */
   font-size: 11pt;
 }
 .calendarBack {
@@ -456,7 +456,8 @@ input {
 }
 
 .event-page-header{
-  background-color: rgba(8, 57, 90, 0.781);
+  background-color:#2d6e8c;
+  opacity: 5px;
   color: white;
   display: flex;
   flex-direction: row;
@@ -489,14 +490,14 @@ event-page-content__hype,
   background-image: url('https://www.varunajithesh.com/wp-content/sabai/File/files/l_22951d350661712745cd4fec167f8e9f.jpg');
 }
 .overlay-gradient-frombottom{
-  background: rgba(19,19,19,0.33);
+  /* background: rgba(19,19,19,0.33);
   background: -moz-linear-gradient(top, rgba(19,19,19,0.33) 0%, rgba(19,19,19,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(19,19,19,0.33)), color-stop(100%, rgba(19,19,19,1)));
   background: -webkit-linear-gradient(top, rgba(19,19,19,0.33) 0%, rgba(19,19,19,1) 100%);
   background: -o-linear-gradient(top, rgba(19,19,19,0.33) 0%, rgba(19,19,19,1) 100%);
   background: -ms-linear-gradient(top, rgba(19,19,19,0.33) 0%, rgba(19,19,19,1) 100%);
   background: linear-gradient(to bottom, rgba(19,19,19,0.33) 0%, rgba(19,19,19,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#131313', GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#131313', GradientType=0 ); */
 }
 .event-poster-image-overlay{
   display: flex;
@@ -569,7 +570,9 @@ event-page-content__hype,
   text-transform: uppercase;
 }
 .data-tag-white{
-  border: solid 2px white;
+  border-bottom: solid 2px white;
+  border-top: solid 2px white;
+  font-size: 1.8rem;
   color: white;
 }
 .data-tag-gray{
@@ -654,13 +657,28 @@ event-page-content__hype,
   transition: transform 0.12s ease-in-out, box-shadow 0.12s ease-in-out;
 }
 .event-card:hover{
-  box-shadow: 0 16px 66px rgba(0,0,0,0.33);
+  /* box-shadow: 0 16px 66px rgba(0,0,0,0.33); */
   transform: scale(1.02);
   
 }
 .event-card__poster{
-  background-image: url('https://www.reserveamerica.com/webphotos/racms/articles/images/14729713-a68d-416f-a4ea-dcfcb4c97cb0_image2_fire-main.jpg');
+  background-image: url("assets/car1.png");
+  /* background-position: center; */
+  /* background-size: cover; */
+}
+.event-card__poster1{
+  background-image: url("assets/car1.png");
+  /* background-position: center; */
+  background-size: cover;
+}
+.event-card__poster2{
+  background-image: url("assets/car5.png");
   background-position: center;
+  background-size: cover;
+}
+.event-card__poster3{
+  background-image: url("assets/car2.png");
+  /* background-position: center; */
   background-size: cover;
 }
 .event-card-poster-overlay{
@@ -674,15 +692,15 @@ event-page-content__hype,
 .event-card__description,
 .event-card__details{
   box-sizing: border-box;
-  padding: 26px;
+  padding: 6px;
 }
 .event-card__details{
   padding-top: 16px;
 }
 .event-card__description h3{
-  font-size: 22px;
+  /* font-size: 22px; */
   font-weight: bold;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
   line-height: 26px;
 }
 .event-card__description{

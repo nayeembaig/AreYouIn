@@ -25,7 +25,7 @@ const Events = props => (
           {" "}
           <Link to={"/edit/" + props.events._id}>
             {/* <img style={{ width: "230px", height: "250px" }} src={Snippet} />{" "} */}
-            <img style={{ width: "230px", height: "250px" }} src={imgArray[Math.floor((Math.random() * 2) )]} />{" "}
+            <img style={{ width: "230px", height: "250px", borderRadius:"10px" }} src={imgArray[Math.floor((Math.random() * 2) )]} />{" "}
             {/* <img style={{ width: "230px", height: "250px" }} src={props.events.picture} />{" "} */}
             <div class="card-img-overlay">
           <button
@@ -53,13 +53,13 @@ const Events = props => (
         </div>
         <div
           className="card_content "
-          style={{ height: "50px", fontStyle: "Clarendon Serif" }}
+          style={{ height: "50px" }}
         >
           <h2 className="card_title" >{props.events.name} </h2>
           <div className="row">
             <p
               className="card_text "
-              style={{ paddingLeft: "4rem", fontStyle: "Clarendon Serif" }}
+              style={{ paddingLeft: "8rem"}}
             >
               {props.events.location} | {props.events.age}
               {/* <form onSubmit={this.onSubmitLike(props.events._id)}> */}

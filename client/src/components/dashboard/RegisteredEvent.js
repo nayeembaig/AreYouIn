@@ -56,10 +56,10 @@ const Venues = props => (
               />{" "}
             </Link>
           </div>
-          <div className="card_content " style={{ height: "50px", fontStyle:"Clarendon Serif"}}>
+          <div className="card_content " style={{ height: "50px"}}>
             <h2 className="card_title">{props.venue.name} </h2>
             <div className="row">
-              <p className="card_text " style={{paddingLeft:"8rem", fontStyle:"Clarendon Serif"}}>
+              <p className="card_text " style={{paddingLeft:"8rem"}}>
               90%  <i class="fas fa-heart fa-lg" style={{color:"#FF1493"}}> </i> | {props.venue.location}     |     {props.venue.age}
               </p>
               {/* <p className="card_text col-4">{props.venue.location}</p>

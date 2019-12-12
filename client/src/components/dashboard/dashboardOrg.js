@@ -63,7 +63,7 @@ const DashboardOrg = ({
             <p style={{color:"black"}}> <i class="fas fa-plus-square fa"></i> Add an event</p>
           </Link></li>
     <li class="list-group-item"> <Link to="/edit-profile"  >
-            <p style={{color:"black"}}> <i className="far fa-id-badge" style={{color:"blue"}}></i> Your Profile</p>
+            <p style={{color:"black"}}> <i className="far fa-id-badge" ></i> Your Profile</p>
           </Link></li>
   </ul>
 </div>

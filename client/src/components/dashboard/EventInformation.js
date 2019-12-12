@@ -8,6 +8,7 @@ import GoogleMapReact from 'google-map-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGem, faStickyNote, faChair } from  '@fortawesome/free-solid-svg-icons';
 import Navbar from "../layout/Navbar";
+import host from "../../img/host.jpg";
 
 const AA =props =>(props.events.name);
 
@@ -115,7 +116,7 @@ export default class EventInformation extends Component {
           
 
           <Navbar></Navbar>
-        <div style={{padding: "1rem"}}>
+        <div >
     <div class="event-page-header">
     <div class="event-page-header__poster event-poster-image">
         <div class="event-poster-image-overlay overlay-gradient-frombottom">
@@ -141,25 +142,50 @@ export default class EventInformation extends Component {
     <div class="event-page-header__context">
         <div class="event-page-title">
             <Link class="event-category-tag" to={'/SearchEvents/'}>See Other Events</Link>
-            <h1>{this.state.name}</h1>
+            <h2 style={{textAlign:"center"}}>{this.state.name}</h2>
+            <hr></hr>
+            <p>{this.state.information}</p>
         </div>
         <div class="event-page-cta">
-            <p class="txt-bold">What's in Store for You:</p> <h2>{this.state.information}</h2>
+            {/* <h2>{this.state.information}</h2> */}
+            <p>{this.state.Details}
+            </p>
+        <center>
+          <hr></hr>
+            {/* <p class="countdown-number" style={{color:"black"} }> </p> */}
+                    <p ><i style={{color:"white"}} class="fas fa-chair"></i>Event Capacity {this.state.capacity}</p>
+  
             <div class="event-page-cta__action-bar">
             <p hidden ={this.state.showmessage}>this event is full, you will be put in waitlist if you still want Register for this event </p>
             {this.reg()} 
         <button class="btn btn-cta" href="#" ><Link to={'/cancel/'+ this.props.match.params.id}>cancel</Link></button>  <span class="data-tag data-tag-white">{this.state.pay} </span>
         <p class="btn2" style={{fontSize:"3rem", color:"white"}}><FontAwesomeIcon icon={faGem} /></p>
             </div>
+            </center>
         </div>
     </div> 
 </div> 
-<div class="event-page-content">
-    <div class="event-page-content__description">
-        <div class="event-page-description">
-        <h2 class="txt-bold" style={{textAlign:"center", color:"black"}}><FontAwesomeIcon icon={faStickyNote} /> Event Description</h2>
-            <p>{this.state.Details}
-            </p>
+<div class="event-page-content" >
+    <div class="event-page-content__description" >
+        <div class="event-page-description" style={{border:"none"}}>
+  
+         
+        <div class="card mb-3" style={{maxWidth:"540px"}}>
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src={host} class="card-img" />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h3 class="card-title">About the Host <i style={{color:"skyBlue"}}class="fas fa-check-square"></i></h3>
+        <p class="card-text" style={{padding:"2px"}}>Hey everyone, Ishita here. From here on out I will be your main point of contact for your adventure! We like to offer outside-the-box travel experiences, not stuffy off-the-shelf tours.</p>
+       
+      </div>
+    </div>
+  </div>
+</div>
+           
+         
         </div>
     </div> 
     <div class="event-page-content__hype">
@@ -178,23 +204,81 @@ export default class EventInformation extends Component {
            />
          </GoogleMapReact>
          
-       
+         <h4 style={{textAlign:"center", padding: "20px"}}><i style={{color:"skyBlue"}} class="fas fa-map-marker-alt"></i> {this.state.address}</h4>
                     
                 
                 
             
         
         <div class="event-recommendations">
-            
+           
         </div>
+      
     </div> 
-</div>   
+
+    
+</div> 
+<hr></hr>
+{/* <h2 style={{textAlign:"center"}}></h2>   */}
+{/* <p style={{textAlign:"center"}}>Whether you're a foodie or a hiker, an animal lover or an archaeology buff, there’s an adventure to explore your passion.</p> */}
   </div>
-  <center>
-  <h3 style={{textAlign:"center", padding: "20px"}}>Local Address: {this.state.address}</h3>
-  <p class="countdown-number" style={{color:"black"} }><FontAwesomeIcon icon={faChair} /> </p>
-                    <span class="countdown-number">Event Capacity: {this.state.capacity}</span>
-     </center>
+
+ 
+  <div class="event-page-events-recommended">
+          <h2>Events that match your Interests</h2>
+          <p style={{textAlign:"center"}}>Whether you're a foodie or a hiker, an animal lover or an archaeology buff, there’s an adventure to explore your passion.</p>
+  <hr></hr>
+          <div class="events-list">
+            <div class="events-list__card-wrap">
+              <div class="event-card">
+                <div class="event-card__poster1">
+                  <div class="event-card-poster-overlay overlay-gradient-frombottom">
+                    
+                  </div>
+                </div>
+
+                <div className="event-card__description">
+                  <h3 style={{textAlign:"center"}}>Trekking at Brown County</h3>
+               
+                </div>
+              
+              </div>
+            </div>
+            <div class="events-list__card-wrap">
+              <div class="event-card">
+                <div class="event-card__poster2">
+                  <div class="event-card-poster-overlay overlay-gradient-frombottom">
+                    
+                  </div>
+                </div>
+
+                <div className="event-card__description">
+                  <h3 style={{textAlign:"center"}}>Star Gazing at Brown County</h3>
+               
+                </div>
+              
+              </div>
+            </div>
+
+            <div class="events-list__card-wrap">
+              <div class="event-card">
+                <div class="event-card__poster3">
+                  <div class="event-card-poster-overlay overlay-gradient-frombottom">
+                    
+                  </div>
+                </div>
+              
+                <div className="event-card__description">
+                  <h3 style={{textAlign:"center"}}>Hoosier Party</h3>
+               
+                </div>
+            
+              </div>
+            </div>
+
+
+          </div>
+        </div>
      
   </div> 
     )

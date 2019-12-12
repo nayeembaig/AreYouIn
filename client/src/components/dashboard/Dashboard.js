@@ -55,13 +55,15 @@ const Dashboard = ({
               </div>
             </div>
             <div>
+            <h2 style={{textAlign:"center"}}>Actions</h2>
             <div class="card" >
  
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"> <Link to={"/registerevent/" + user._id}>View</Link></li>
-    <li class="list-group-item">  <Link to={"/waitinglistevent/" + user._id}>WaitingList</Link></li>
+    <li class="list-group-item"> <Link to={"/registerevent/" + user._id}>      <p style={{color:"black"}}> <i class="fas fa-tasks fa"></i>  Registered And Completed</p>
+</Link></li>
+    <li class="list-group-item">  <Link to={"/waitinglistevent/" + user._id}>   <p style={{color:"black"}}> <i class="fas fa-plus-square fa"></i> Waitlisted Events</p></Link></li>
     <li class="list-group-item"> <Link to="/edit-profile"  >
-            <p style={{color:"black"}}> <i className="far fa-id-badge" style={{color:"blue"}}></i> Your Profile</p>
+            <p style={{color:"black"}}> <i className="far fa-id-badge" style={{color:"black"}}></i> Your Profile</p>
           </Link></li>
   </ul>
 </div>
@@ -70,7 +72,7 @@ const Dashboard = ({
               <p>  </p>
              
             </div>
-            <div class="calendar" style={{height:"200px"}}>
+            <div class="calendar" style={{height:"300px"}}>
         <FullCalendar 
         defaultView="dayGridMonth" 
         plugins={[ dayGridPlugin ]} 
@@ -100,7 +102,7 @@ const Dashboard = ({
           </div>
           <div class="grid">
             <div class="column lg12">
-              <h3 class="section__title">Events You Love  <i class="fas fa-heart fa-lg" style={{color: "#FF1493", width:"25px", height:"25px" }}></i></h3>
+              <h2 class="section__title" style={{textAlign:"center"}}>Events You Love  <i class="fas fa-heart fa-lg" style={{color: "#FF1493", width:"25px", height:"25px" }}></i></h2>
             </div>
             <div
               class="column lg8 md12 sm12" 
@@ -122,7 +124,7 @@ const Dashboard = ({
                       src={imgArray[Math.floor((Math.random() * 2) )]}
                       // class="d-block w-100"
                       alt="..."
-                      style={{width:"200px", height:"200px "}}
+                      style={{width:"200px",borderRadius:"16px",padding:"20px", height:"200px "}}
                       
                     /></Link>
                       
@@ -191,32 +193,21 @@ const Dashboard = ({
             </div>
             {profile !== null ? (
               <Fragment>
-                <div class="column lg4 md12 sm12">
-                  <div class="widget">
-                  <div class="title">
-                    <img src={Form} style={{width:"50px",height:"50px"}}></img>
-    <p>Profile Actions</p>
-                    </div>
-                    <div class="list">
-                    <ul class="list-group">
-  {/* <li class="list-group-item"><DashboardActions /></li> */}
-  <li class="list-group-item">
-  <div>
-    <Link to="/edit-profile">
-                            <p>Your Profile</p>
-                          </Link>
-    </div>
-    </li>
-     
-  <li class="list-group-item"> <button type="button" class="btn btn-outline-secondary"   onClick={() => deleteAccount()}>
-               Delete Account
-            </button></li>
-  {/* <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li> */}
-</ul>
-                    </div>
-                  </div>
+                
+  
+                <div className="container text-center">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      onClick={() => deleteAccount()}
+                    >
+                      Delete Account
+                    </button>
+                  </li>
+                </ul>
                 </div>
               </Fragment>
             ) : (
