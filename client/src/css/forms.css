@@ -141,9 +141,7 @@
   color:grey;
   font-family: 'Quicksand', sans-serif;
 }
-.input1:hover{
-  /* background:Gainsboro; */
-}
+
 .input2{
   width:80%;
   height:25px;
@@ -157,9 +155,6 @@
   text-align:center !important;
   color:grey;
   font-family: 'Quicksand', sans-serif;
-}
-.input2:hover{
-  /* background:Gainsboro; */
 }
 
 /* .input3{ */

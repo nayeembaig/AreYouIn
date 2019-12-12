@@ -1,4 +1,4 @@
-@importxt-bold "~@fullcalendar/core/main.css";
+@import '~@fullcalendar/core/main.css';
 @import "~@fullcalendar/daygrid/main.css";
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
 /* Global Styles */
@@ -477,13 +477,13 @@ event-page-content__hype,
   border-right: solid 1px #525252;
 }
 .event-poster-image{
-  backgound-size: cover;
+  background-size: cover;
   background-repeat: no-repat;
   background-position: center;
   background-image: url('http://nederlandliving.com/wp-content/uploads/2018/07/campfire-1140x700.jpg');
 }
 .event-poster-image2{
-  backgound-size: cover;
+  background-size: cover;
   background-repeat: no-repat;
   background-position: center;
   background-image: url('https://www.varunajithesh.com/wp-content/sabai/File/files/l_22951d350661712745cd4fec167f8e9f.jpg');

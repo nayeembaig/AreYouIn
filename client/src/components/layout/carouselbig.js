@@ -14,64 +14,63 @@ export default class MultipleItems extends Component {
       const settings = {
         dots: true,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 2000,
-        
+        speed: 4000,
         autoplaySpeed: 2000,
         cssEase: "linear"
       };
       return (
-        <div>
+        <div >
        
           <Slider {...settings}>
             <div>
             <img
                                 src={poster1}
-                                style={{width:"600px",borderRadius:"20px",marginLeft:"10px",paddingRight:"40px",paddingLeft:"40px" ,marginRight:"10px", objectFit: 'cover',borderRadius:"10px"}}
+                                style={{width:"600px",borderRadius:"20px",marginLeft:"20px",padding:"10px",marginRight:"20px", objectFit: 'cover',borderRadius:"10px", zIndex:'-1'}}
                                 alt="..."
                               />
             </div>
             <div>
             <img
                                 src={poster5}
-                                style={{width:"600px",borderRadius:"20px",marginLeft:"10px",paddingRight:"40px",paddingLeft:"40px" ,marginRight:"10px", objectFit: 'cover',borderRadius:"10px"}}
+                                style={{width:"600px",borderRadius:"20px",marginLeft:"20px",padding:"10px" ,marginRight:"20px", objectFit: 'cover',borderRadius:"10px", zIndex:'-1'}}
                                 alt="..."
                               />
             </div>
             <div>
             <img
                                 src={poster6}
-                                style={{width:"600px",borderRadius:"20px",marginLeft:"10px",paddingRight:"40px",paddingLeft:"40px" ,marginRight:"10px", objectFit: 'cover',borderRadius:"10px"}}
+                                style={{width:"600px",borderRadius:"20px",marginLeft:"20px",padding:"10px" ,marginRight:"20px", objectFit: 'cover',borderRadius:"10px", zIndex:'-1'}}
                                 alt="..."
                               />
             </div>
             <div>
             <img
                                 src={poster7}
-                                style={{width:"600px",borderRadius:"20px",marginLeft:"10px",paddingRight:"40px",paddingLeft:"40px" ,marginRight:"10px", objectFit: 'cover',borderRadius:"10px"}}
+                                style={{width:"600px",borderRadius:"20px",marginLeft:"20px",padding:"10px" ,marginRight:"20px", objectFit: 'cover',borderRadius:"10px", zIndex:'-1'}}
                                 alt="..."
                               />
             </div>
             <div>
             <img
                                 src={poster8}
-                                style={{width:"600px",borderRadius:"20px",marginLeft:"10px",paddingRight:"40px",paddingLeft:"40px" ,marginRight:"10px", objectFit: 'cover',borderRadius:"10px"}}
+                                style={{width:"600px",borderRadius:"20px",marginLeft:"20px",padding:"10px" ,marginRight:"20px", objectFit: 'cover',borderRadius:"10px", zIndex:'-1'}}
                                 alt="..."
                               />
             </div>
             <div>
             <img
                                 src={poster2}
-                                style={{width:"600px",borderRadius:"20px",paddingRight:"40px",paddingLeft:"40px" , objectFit: 'cover', borderRadius:"10px"}}
+                                style={{width:"600px",borderRadius:"20px",marginLeft:"20px",padding:"10px" ,marginRight:"20px", objectFit: 'cover', borderRadius:"10px"}}
                                 alt="..."
                               />
             </div>
             <div>
             <img
                                 src={poster3}
-                                style={{width:"600px",borderRadius:"20px", paddingRight:"40px",paddingLeft:"40px" ,objectFit: 'cover', borderRadius:"10px"}}
+                                style={{width:"600px",borderRadius:"20px",marginLeft:"20px",padding:"10px" ,marginRight:"20px" ,objectFit: 'cover', borderRadius:"10px"}}
                                 alt="..."
                               />
             </div>

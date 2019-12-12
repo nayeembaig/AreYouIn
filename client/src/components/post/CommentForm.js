@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addComment } from "../../actions/post";
 
+
 const CommentForm = ({ postId, addComment }) => {
   const [text, setText] = useState("");
 
   return (
     <div>
-      <div></div>
+    
       <form
         onSubmit={e => {
           e.preventDefault();
@@ -38,14 +39,14 @@ const CommentForm = ({ postId, addComment }) => {
             onChange={e => setText(e.target.value)}
             required
           />
-        </div>
+        
         {/* <input type='submit' className='btn btn-dark my-1' value='Submit' /> */}
         <input type="submit" value="Submit"   style={{
-                    marginLeft: "850px",
-                    height: "30px",
-                    width: "100px"
-                  }} className="btn btn-info" />
+                    
+                  }} className="btn btn-info w-25" />
+                  </div>
       </form>
+      
     </div>
   );
 };

@@ -16,10 +16,10 @@
       margin-left
       
       : 20px auto;
-      padding-bottom: 5px;
-      padding-top: 5px;
-      padding-left: 1px;
-      padding-right: 1px;
+      /* padding-bottom: 5px; */
+      /* padding-top: 5px; */
+      /* padding-left: 1px; */
+      /* padding-right: 1px; */
     }
     .message-container {
       background-color: white;
@@ -76,7 +76,7 @@
       display: flex;
       justify-content: space-between;
       border-bottom: #DFE3EB solid 1px;
-      padding-bottom: 16px;
+      /* padding-bottom: 16px; */
       width: 100%;
     }
     .user-details .user-name {
@@ -110,8 +110,8 @@
       font-size: 13px;
       font-weight: 600;
     }
-    .message-content-body {
-      padding: 24px 88px 46px 75px;
+    .message-content {
+      /* padding: 24px 88px 46px 75px; */
       margin-bottom: 10px;
     }
     

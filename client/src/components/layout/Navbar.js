@@ -6,7 +6,7 @@ import { logout } from "../../actions/auth";
 import { SearchEvents } from "../dashboard/SearchEvents";
 import { SearchPeople } from "../dashboard/SearchPeople";
 import { Contact } from "../contactus/Contact";
-import logo from "../../img/logoo.png";
+import logo from "../../img/looog.png";
 import "../../css/navbar.css";
 // import terms from "../termsandpolicy";
 
@@ -92,6 +92,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       
       <li class="nav-item dropdown">
         <a
+        style={{zIndex:"1000"}}
           class="nav-link dropdown-toggle"
           href="#"
           id="navbarDropdownMenuLink"
@@ -105,6 +106,12 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           class="dropdown-menu u dropdown-menu-right bg-dark"
           aria-labelledby="navbarDropdownMenuLink"
         >
+           <li>
+        <Link to='/SearchEvents'>
+          {/* <i className='fas fa-user' />{' '} */}
+          <span className='hide-sm'>Chat</span>
+        </Link>
+     </li>
        
           <li>
           <Link to="/SearchVenue">

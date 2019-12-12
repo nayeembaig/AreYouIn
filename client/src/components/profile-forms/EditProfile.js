@@ -161,17 +161,47 @@ const EditProfile = ({
                   
                     <div className="col-6">
                     
-                  <input type="submit" style={{marginLeft:"500px",width:"100px", height:"30px"}} className="btn btn-info" />
+                  <input type="submit"    style={{
+                  
+                      height: "35px",
+                      marginTop:"20px",
+                      width: "30%",
+                      backgroundColor: "#17a2b8",
+                      fontSize:"1.2rem",
+                      color:"black"
+                      
+                    }} className="btn btn-info" />
                   </div>
-                  <div className="col-6">
+                  {/* <div className="col-6">
                   <Link className="btn btn-info" style={{marginLeft:"650px",width:"100px", height:"30px"}} to="/dashboard">
                     Back to Dashboard
                   </Link> 
-                  </div>
+                  </div> */}
                     </form>
                   </div>
                 </div>
-
+                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+          <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog" role="document">
+    <div className="modal-content">
+      <div className="modal-header">
+        <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div className="modal-body">
+        ...
+      </div>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" className="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
                 <form onSubmit={e => onSubmit(e)}>
                   {/* <div className='form-group'> */}
                   {/* <select

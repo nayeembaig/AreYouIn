@@ -13,7 +13,7 @@ const PostForm = ({ addPost }) => {
         class="jumbotron text-center"
         style={{ backgroundColor: "lightblue" }}
       >
-        <h2>Welcome to PlayGround- A Discussion Forum</h2>
+        <h2>Welcome to PlayGround - A Discussion Forum</h2>
         {/* <hr style={ {:"1rem"}} class="my-4"/> */}
         <p><bold>Please Read the below guidelines before posting </bold> </p>
       <h4>1. Thread titles should be relevant to the content in the thread.</h4>  
@@ -25,7 +25,7 @@ const PostForm = ({ addPost }) => {
       </div>
       <div
         className="post-form"
-        style={{ marginLeft: "20px", marginRight: "20px" }}
+       
       >
         <form
           onSubmit={e => {
@@ -58,12 +58,7 @@ const PostForm = ({ addPost }) => {
                 ></textarea>
                 <input
                   type="submit"
-                  style={{
-                    // marginLeft: "850px",
-                    backgroundColor:"lightblue",
-                    height: "30px",
-                    width: "120px"
-                  }}
+                  
                   className="btn btn-info w-25"
                   value="Submit"
                 />

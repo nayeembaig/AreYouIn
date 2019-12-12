@@ -14,6 +14,8 @@ import Snippet1 from "../../assets/snippet.png";
 import Snippet2 from "../../assets/snippet2.png";
 import Navbar from "../../components/layout/Navbar";
 import party from '../../assets/party.png'
+import villas from '../../assets/villaas.jpg'
+import events from '../../assets/eventss.jpg'
 import pool from '../../assets/pool.png'
 import italy from '../../assets/italy.png'
 const imgArray = [party, pool, italy]
@@ -179,34 +181,55 @@ export default class Landingpage extends Component {
         <div style={{marginTop:"20px"}}>
           <Carousel3 ></Carousel3>
           <br></br>
-          <div class="container-fluid">
-    <div class="row">
-        <div class="col-6 mt-3">
-            <div class="card">
-                <div class="card-horizontal" style={{  display: "flex",
-    flex: "1 1 auto"}}>
-                    <div class="img-square-wrapper">
-                        <img class="" src="http://via.placeholder.com/300x180" alt="Card image cap"/>
-                    </div>
-                    <div class="card-body">
-                        {/* <h4 class="card-title">Card title</h4> */}
-                        <p class="card-text">Browse All Events</p>
-                    </div>
-                </div>
-             
+          <br></br>
+          <div class="container text-center">
+          
+            <div class="row">
+              <div class="col-lg-6 mt-3" >
+                  <div class="card" style={{marginLeft:"200px",backgroundColor:"E9E9E9",borderRadius:"16px",width:"250px",height:"100px"}} >
+                  <Link to='/SearchEvents' style={{color:"black"}}>
+                      <div class="card-horizontal" style={{  display: "flex",flex: "1 1 auto"}}>
+                          <div class="img-square-wrapper">
+                              <img class="" src={villas} style={{ borderTopLeftRadius:"16px",borderBottomLeftRadius:"16px", width:"100px",height:"100px", boxShadow: "0 20px 40px -14px rgba(0, 0, 0, 0.25)"}}alt="Card image cap"/>
+                          </div>
+
+                          <div class="card-body">
+                              <p class="card-text" style={{padding:"30px"}}>Events</p>
+                          </div>
+                        
+                      </div>
+                      </Link>
+                      </div>
+                  
+              </div>
+              <div class="col-lg-6 mt-3">
+        
+              <div class="card" style={{backgroundColor:"E9E9E9",borderRadius:"16px",width:"250px",height:"100px"}} >
+              <Link to='/SearchVenue' style={{color:"black"}}>
+                  <div class="card-horizontal" style={{  display: "flex",flex: "1 1 auto"}}>
+                      <div class="img-square-wrapper">
+                          <img class="" src={events} style={{ borderTopLeftRadius:"16px",borderBottomLeftRadius:"16px", width:"100px",height:"100px", boxShadow: "0 20px 40px -14px rgba(0, 0, 0, 0.25)"}}alt="Card image cap"/>
+                      </div>
+                      <div class="card-body">
+                          {/* <h4 class="card-title">Card title</h4> */}
+                          <p class="card-text" style={{padding:"30px"}}>Stays</p>
+                      </div>
+                  </div>
+                  </Link>
+                  </div>
+           
+          </div>  
             </div>
-        </div>
-    </div>
-</div>
+          </div>
           <br></br>
           <div style={{padding:"20px"}}>
-          <h4 style={{textAlign:"center"}}>Events Near you </h4>
+          <h3 style={{textAlign:"center"}}>Events Near you </h3>
           <Carousel></Carousel>
           <br></br>
-          <h4  style={{textAlign:"center"}}>Places to Visit </h4>
+          <h3  style={{textAlign:"center"}}>Places to Visit </h3>
           <Carousel2></Carousel2>
           <br></br>
-          <h4  style={{textAlign:"center"}}> Bloomington Events</h4>
+          <h3  style={{textAlign:"center"}}> Bloomington Events</h3>
           <div class="container">
             {this.exerciseListb()}
             </div>

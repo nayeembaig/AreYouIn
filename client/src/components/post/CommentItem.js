@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Moment from 'react-moment';
 import { deleteComment } from '../../actions/post';
+
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faCog } from   '@fortawesome/free-solid-svg-icons';
 
@@ -15,7 +16,8 @@ const CommentItem = ({
 }) => (
    
   <div className="container">
-<div class="message-container" style={{border: "1px solid #EFF9FC", borderRadius: "5px", backgroundColor:"#EFF9FC"}}>
+
+<div class="message-container" style={{border: "1px solid #EFF9FC", borderRadius: "5px", backgroundColor:"#ccf5ff  "}}>
     <div class="status-bar" style={{padding:"2px", marginTop:"2px"}}>
     <h2 class="my-0">
 
@@ -41,7 +43,7 @@ const CommentItem = ({
          <div class="message-details">
            
            <div class="message-date" style={{color:"black"}}>
-             <span>  Posted on <Moment format='YYYY/MM/DD'>{date}</Moment></span>
+             {/* <span>  Posted on <Moment format='YYYY/MM/DD'>{date}</Moment></span> */}
            </div>
            {!auth.loading && user === auth.user._id && (
             <button
