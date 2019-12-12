@@ -130,6 +130,7 @@ export default class RegisteredEvent extends Component {
           <p>Events</p>
           
 { this.exerciseList() }
+<button class="btn btn-cta" href="#" ><Link to={'/cancel/'+ this.props.match.params.id}>cancel event</Link></button>
 <p>Venues</p>
 {this.exerciseLists()}
         </div>

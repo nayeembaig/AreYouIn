@@ -103,7 +103,7 @@ export default class EventInformation extends Component {
   }
   reg(){
     if (this.state.pay == 'paid')
-      return <button class="btn btn-cta" href="#"onClick ={this.onsubmit} disabled={this.state.disabled1}><Link to={'/payment/'+ this.props.match.params.id}>Register</Link></button>
+      return <button class="btn btn-cta" href="#"onClick ={this.onsubmit} disabled={this.state.disabled1}><Link to={'/paymentq'}>Register</Link></button>
     else
       return <button class="btn btn-cta" href="#"onClick ={this.onsubmit} disabled={this.state.disabled1}><Link to={'/payment/'+ this.props.match.params.id}>Register</Link></button>
 
@@ -158,7 +158,7 @@ export default class EventInformation extends Component {
             <div class="event-page-cta__action-bar">
             <p hidden ={this.state.showmessage}>this event is full, you will be put in waitlist if you still want Register for this event </p>
             {this.reg()} 
-        <button class="btn btn-cta" href="#" ><Link to={'/cancel/'+ this.props.match.params.id}>cancel</Link></button>  <span class="data-tag data-tag-white">{this.state.pay} </span>
+          <span class="data-tag data-tag-white">{this.state.pay} </span>
         <p class="btn2" style={{fontSize:"3rem", color:"white"}}><FontAwesomeIcon icon={faGem} /></p>
             </div>
             </center>
