@@ -5,10 +5,13 @@ const RoomUsers = props => {
   const { roomUsers, sendDM, currentUser } = props;
   const users = roomUsers.map(user => {
     return (
+      
       <li className="room-member" key={user.id}>
+      
         <div>
+       
           <span className={`presence ${user.presence.state}`} />
-          
+          {user.id}
         </div>
         {currentUser.id !== user.id ? (
           <button

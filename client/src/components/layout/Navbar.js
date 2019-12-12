@@ -16,6 +16,12 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li>
         <Link to="/posts">PlayGround</Link>
       </li>
+      <li>
+      <Link to='/chatscreen'>
+          {/* <i className='fas fa-user' />{' '} */}
+          <span className='hide-sm'>Chat</span>
+        </Link>
+        </li>
       <li class="nav-item dropdown">
         <a
           class="nav-link dropdown-toggle"

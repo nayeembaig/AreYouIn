@@ -10,7 +10,7 @@ import Dialog from './Dialog';
 import RoomList from './RoomList';
 import ChatSession from './ChatSession';
 import RoomUsers from './RoomUsers';
-
+import Navbar from "../layout/Navbar";
 import 'skeleton-css/css/normalize.css';
 import 'skeleton-css/css/skeleton.css';
 import '../../css/chats.css';
@@ -52,7 +52,10 @@ class Chatscreen extends Component {
     } = this.state;
 
     return (
+      <div>
+         <Navbar></Navbar>
       <div className="App">
+       
         <aside className="sidebar left-sidebar">
           {currentUser ? (
             <div className="user-profile">
@@ -71,7 +74,7 @@ class Chatscreen extends Component {
         </aside>
         <section className="chat-screen">
           <header className="chat-header">
-            {currentRoom ? <h3>{roomName}</h3> : null}
+            {currentRoom ? <h3>{roomName} <i style={{color: "lightBlue"}} class="fas fa-comments"></i></h3> : null}
           </header>
           <ul className="chat-messages">
             <ChatSession messages={messages} />
@@ -105,6 +108,7 @@ class Chatscreen extends Component {
             connectToChatkit={this.connectToChatkit}
           />
         ) : null}
+      </div>
       </div>
     );
   }

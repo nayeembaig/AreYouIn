@@ -70,7 +70,7 @@ const Register = ({ setAlert,register,isAuthenticated}) => {
 
   <div className='formslayout-inner'>
        <div class="page">
-  <div class="login"> 
+  <div class="register"> 
 <div class="formulaire">
 <h2 class="text-center" style={{color:"black"}}  >Register Now!</h2>
 
