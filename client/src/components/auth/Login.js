@@ -35,13 +35,13 @@ const Login = ({ login, isAuthenticated }) => {
   
     const responseGoogle = (res) => {
     console.log(res);
-    login(window.localStorage.getItem("emailID"), "nayeem");
+    login(window.localStorage.getItem("emailID"), "ishitakumar");
   }
 
   const responseFacebook = (response) => {
     console.log(response);
     if(response)
-	login(window.localStorage.getItem("emailID"), "nayeem");
+	login(window.localStorage.getItem("emailID"), "ishitakumar");
 
 }
 
