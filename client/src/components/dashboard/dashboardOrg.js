@@ -45,24 +45,29 @@ const DashboardOrg = ({
             <h1>Welcome back, {user && user.name}</h1>
             <p>Nice to see you again</p>
           </div>
+
+       
         </div>
         <div>
           
-          <img src={Form} style={{ width: "130px", height: "130px" }}></img>
+          {/* <img src={Form} style={{ width: "130px", height: "130px" }}></img> */}
           <div >
-          <Link to="/landingorg" class="btn btn-info">
-            <p>Manage Events</p>
+            <h2 style={{textAlign:"center"}}>Actions</h2>
+          <div class="card" >
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><Link to="/landingorg" >
+      <p style={{color:"black"}}> <i class="fas fa-tasks fa"></i>  Manage Events</p>
             {/* <modal></modal> */}
-          </Link>
-      <hr></hr>
-          <Link to="/Addevent" class="btn btn-info">
-            <p>Add an event</p>
-          </Link>
-          <hr></hr>
-          <Link to="/edit-profile" class="btn btn-info" style={{marginLeft:"150px"}}>
-            <p>Your Profile</p>
-          </Link>
-          
+          </Link></li>
+    <li class="list-group-item"> <Link to="/Addevent" >
+            <p style={{color:"black"}}> <i class="fas fa-plus-square fa"></i> Add an event</p>
+          </Link></li>
+    <li class="list-group-item"> <Link to="/edit-profile"  >
+            <p style={{color:"black"}}> <i className="far fa-id-badge" style={{color:"blue"}}></i> Your Profile</p>
+          </Link></li>
+  </ul>
+</div>
+        
           </div>
         </div>
       </div>
@@ -73,150 +78,41 @@ const DashboardOrg = ({
   <li><a href="#">Menu 2</a></li>
   <li><a href="#">Menu 3</a></li>
 </ul> */}
-
-      <div class="grid">
-        <div class="column lg12">
-          <h3 class="section__title">
-            Be a good host, Get to know your Guests!
-          </h3>
-        </div>
-        <div class="column lg8 md12 sm12" style={{ paddingLeft: "35px" }}>
-          <div class="widget">
-            <div class="container row">
-              <div
-                id="carouselExampleInterval"
-                class="carousel slide"
-                data-ride="carousel"
-              >
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-interval="5000">
-                    <div class="row">
-                      <div class="col-3">
-                        <Link to={"/edit/5dacf7dc1c9d440000fd2b34"}>
-                          <img
-                            style={{ width: "200px", width: "200px" }}
-                            src={imgArray[Math.floor(Math.random() * 4)]}
-                            class="d-block w-100"
-                            alt="..."
-                          />
-                        </Link>
-                      </div>
-                      <div class="col-3">
-                        <Link to={"/edit/5dacf7dc1c9d440000fd2b34"}>
-                          <img
-                            style={{ width: "200px", width: "200px" }}
-                            src={imgArray[Math.floor(Math.random() * 4)]}
-                            class="d-block w-100"
-                            alt="..."
-                          />
-                        </Link>
-                      </div>
-                      <div class="col-3">
-                        <Link to={"/edit/5dacf7dc1c9d440000fd2b34"}>
-                          <img
-                            style={{ width: "200px", width: "200px" }}
-                            src={imgArray[Math.floor(Math.random() * 4)]}
-                            class="d-block w-100"
-                            alt="..."
-                          />
-                        </Link>
-                      </div>
-                      <div class="col-3">
-                        <Link to={"/edit/5dacf7dc1c9d440000fd2b34"}>
-                          <img
-                            style={{ width: "200px", width: "200px" }}
-                            src={imgArray[Math.floor(Math.random() * 4)]}
-                            class="d-block w-100"
-                            alt="..."
-                          />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="carousel-item" data-interval="3000">
-                    <div class="row">
-                      <div class="col-3">
-                        <img
-                          style={{ width: "200px", width: "200px" }}
-                          src={imgArray[Math.floor(Math.random() * 4)]}
-                          class="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-3">
-                        <img
-                          style={{ width: "200px", width: "200px" }}
-                          src={imgArray[Math.floor(Math.random() * 3)]}
-                          class="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-3">
-                        <img
-                          style={{ width: "200px", width: "200px" }}
-                          src={imgArray[Math.floor(Math.random() * 4)]}
-                          class="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-3">
-                        <img
-                          style={{ width: "200px", width: "200px" }}
-                          src={imgArray[Math.floor(Math.random() * 4)]}
-                          class="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <a
-                  class="carousel-control-prev"
-                  href="#carouselExampleInterval"
-                  role="button"
-                  data-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a
-                  class="carousel-control-next"
-                  href="#carouselExampleInterval"
-                  role="button"
-                  data-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="sr-only">Next</span>
-                </a>
+   <div class="grid">
+            <div class="column lg12 sm12">
+              <div class="advert">
+                <button type="button" class="close">
+                  <i class="material-icons">&#xE5CD;</i>
+                </button>
+                <h3 >Be a Good Host</h3>
+                    <Link to='/chatscreen'>
+          {/* <i className='fas fa-user' />{' '} */}
+          <span className='hide-sm'><p> Access Your Guests here! </p></span>
+        </Link> 
+              
               </div>
             </div>
           </div>
-        </div>
+      <div class="grid">
+    
         {profile !== null ? (
           <Fragment>
-            <div class=" container column lg4 md12 sm12">
-              <div class="widget">
+         
+            <div className="container text-center">
                 <ul class="list-group">
                   <li class="list-group-item">
-                    {" "}
+                
                     <button
                       type="button"
-                      class="btn btn-outline-secondary"
+                      class="btn btn-danger"
                       onClick={() => deleteAccount()}
                     >
                       Delete Account
                     </button>
                   </li>
                 </ul>
-              </div>
-            </div>
+                </div>
+           
           </Fragment>
         ) : (
           <Fragment>

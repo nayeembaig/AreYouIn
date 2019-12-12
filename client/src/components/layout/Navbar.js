@@ -203,7 +203,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
             <img
               src={logo}
               alt={"logo"}
-              style={{ width: "70px", height: "70px" }}
+              style={{ width: "70px", height: "60px" }}
             />
           </Link>
         </a>

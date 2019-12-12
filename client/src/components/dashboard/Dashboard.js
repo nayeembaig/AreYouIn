@@ -55,12 +55,22 @@ const Dashboard = ({
               </div>
             </div>
             <div>
-               <img src={Calendar} style={{width:"130px",height:"130px"}}></img>Upcoming Events and Venues
-              <p>   <Link to={"/registerevent/" + user._id}>View</Link></p>
-              <p>   <Link to={"/waitinglistevent/" + user._id}>WaitingList</Link></p>
+            <div class="card" >
+ 
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> <Link to={"/registerevent/" + user._id}>View</Link></li>
+    <li class="list-group-item">  <Link to={"/waitinglistevent/" + user._id}>WaitingList</Link></li>
+    <li class="list-group-item"> <Link to="/edit-profile"  >
+            <p style={{color:"black"}}> <i className="far fa-id-badge" style={{color:"blue"}}></i> Your Profile</p>
+          </Link></li>
+  </ul>
+</div>
+               
+              <p>  </p>
+              <p>  </p>
              
             </div>
-            <div class="calendar">
+            <div class="calendar" style={{height:"200px"}}>
         <FullCalendar 
         defaultView="dayGridMonth" 
         plugins={[ dayGridPlugin ]} 
