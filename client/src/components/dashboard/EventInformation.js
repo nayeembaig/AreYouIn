@@ -103,7 +103,7 @@ export default class EventInformation extends Component {
   }
   reg(){
     if (this.state.pay == 'paid')
-      return <button class="btn btn-cta" href="#"onClick ={this.onsubmit} disabled={this.state.disabled1}><Link to={'/paymentq'}>Register</Link></button>
+      return <button class="btn btn-cta" style={{padding:"5px 5px"}} href="#"onClick ={this.onsubmit} disabled={this.state.disabled1}><Link to={'/paymentq'}>Register</Link></button>
     else
       return <button class="btn btn-cta" href="#"onClick ={this.onsubmit} disabled={this.state.disabled1}><Link to={'/payment/'+ this.props.match.params.id}>Register</Link></button>
 

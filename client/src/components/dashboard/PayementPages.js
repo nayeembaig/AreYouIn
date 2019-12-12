@@ -15,7 +15,7 @@ export default class PaymentPages extends Component {
       render() {
       
         return (
-            <div style={{backgroundColor:"skyblue"}}>
+            <div>
             <Navbar></Navbar>
             <form class="credit-card">
             <div class="form-header">
@@ -67,7 +67,7 @@ export default class PaymentPages extends Component {
                   {/* <p>3 or 4 digits usually found <br/> on the signature strip</p> */}
                 </div>
               </div>
-            <hr></hr>
+  
           <br></br>
           <center>
               <button type="submit"  style={{width:"250px", marginTop:"40px"}} class="proceed-btn"><a href="#">Proceed</a></button>
