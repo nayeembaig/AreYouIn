@@ -125,14 +125,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <span className='hide-sm'>Chat</span>
         </Link>
      </li>
+     
      <li>
-        <Link to='/groupchat'>
-          {/* <i className='fas fa-user' />{' '} */}
-          <span className='hide-sm'>groupchat</span>
-        </Link>
-     </li>
-     <li>
-        <Link to='/dashboard'>
+        <Link to='/SearchEvents'>
           {/* <i className='fas fa-user' />{' '} */}
           <span className="hide-sm">Events</span>
         </Link>

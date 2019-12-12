@@ -27,40 +27,24 @@ export default class cancelevent extends Component {
         //this.onSubmit = this.onSubmit.bind(this);
         this.searchh =this.searchh.bind(this);
         this.onSubmit =this.onSubmit.bind(this);
+        this.changeac = this.changeac.bind(this);
         
 
     
   }
 
-  componentDidMount() {
-    console.log(this.props.match.params.id)
-axios.get('http://localhost:5000/api/auth/confirmations/'+this.props.match.params.id)
- .then(response => {
-   this.setState({ 
-     activityname : response.data[0].name,
-     capacity:response.data[0].Capacity
-   })
-   axios.put('http://localhost:5000/api/auth/getfistone',{activityname:response.data[0].name})
- .then(respons => {
-   this.setState({ 
-    firstperson: respons.data[0].listuser
-   })
-   
- })
- .catch((error) => {
-   console.log(error);
- })
- })
- .catch((error) => {
-   console.log(error);
- })
-}
+  
  
  searchh(e){
     // console.log(e.target.value)
    this.setState({email: e.target.value})
   
  }
+ changeac(e){
+  // console.log(e.target.value)
+ this.setState({activityname: e.target.value})
+
+}
   onSubmit(e) {
     e.preventDefault();
     //console.log(exercise);
@@ -110,6 +94,7 @@ axios.get('http://localhost:5000/api/auth/confirmations/'+this.props.match.param
         <h1>Please enter your email </h1>
      <form onSubmit ={this.onSubmit}> 
       <input type='text' value={this.state.email} placeholder='email' onChange ={this.searchh}></input>
+      <input type='text' value={this.state.activityname} placeholder='activityname' onChange ={this.changeac}></input>
       <input type='submit' className='bouton' value='confirm' ></input> 
      </form>   
      <p hidden ={this.state.showmessage}>You will recieve a cancel confimation email, please check your mail box </p>

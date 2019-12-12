@@ -38,6 +38,7 @@ import AddEvent from '../profile-forms/Addevent';
 import PaymentWait from '../dashboard/PaymentWait';
 import WaitingConfirm from '../dashboard/WaitingConfirm';
 import Waitinglistevent from '../dashboard/Waitinglistevent';
+import PaymentPages from '../dashboard/PayementPages';
 
 import Dialog from '../chat/Dialog';
 import RoomList from '../chat/RoomList';
@@ -87,6 +88,7 @@ const Routes = () => {
             <Route path="/confi/:id" component={confirmationpageevent} />
             <Route path="/confis/:id" component={confirmationvenues} />
             <Route path="/payment/:id" component={Paymentevent} />
+            <Route path="/paymentq" component={PaymentPages} />
             <Route path="/payments/:id" component={Paymentvenues} />
             <Route path="/cancel/:id" component={cancelevent} />
             <Route path="/registerevent/:id" component={RegisterEvents} />
