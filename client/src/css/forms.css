@@ -221,3 +221,16 @@
 .forgot:hover{
   color:black;
 }
+
+.my-facebook-button-class{
+  background:rgb(61, 50, 219);
+  top:100px;
+  left: 100px;
+  width: 180px;
+  height: 42px;
+  bottom: auto;
+  font-size: 14px;
+  padding: 0;
+  color:white;
+  border: none;
+}
