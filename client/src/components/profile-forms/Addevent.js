@@ -184,8 +184,9 @@ const AddEvent = ({ setAlert }) => {
                   />
 </div>
                   <br />
-
-                  <input type="submit" class="btn btn-info"value="Submit" style={{marginLeft:"500px",width:"100px", height:"40px"}}/>
+<center>
+                  <input type="submit" class="btn btn-info"value="Submit" style={{textALign:"center",width:"120px",backgroundColor:"lightBlue", height:"40px"}}/>
+                  </center>
                 </form>
               </div>
             </div>

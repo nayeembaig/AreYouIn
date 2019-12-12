@@ -99,19 +99,20 @@ const Login = ({ login, isAuthenticated }) => {
                     Don't have an account? <Link to="/register">Sign Up</Link>
                   </p>
                   <p className="forgot">
-                    Forget your password <Link to="/Sende">Reset Password</Link>
+                    Forgot your password <Link to="/Sende">Reset Password</Link>
                   </p>
-				  
-				  
+		
+<br></br>
+				  <div className="row" style={{marginLeft:"40px"}}>
 				  <GoogleLogin
+          
 				  clientId="279742822832-ruqqjhue6gobnbjl3nc6dclbq7gvht7r.apps.googleusercontent.com"
 				  //googleClientId="279742822832-ruqqjhue6gobnbjl3nc6dclbq7gvht7r.apps.googleusercontent.com"
 				  onSuccess={responseGoogle}
-				  width={500}
-				  height={40}
-				  className="btn btn-outline-danger mt-20"
+		
+				  className="btn btn-outline-danger mt-10"
 				  >
-				  <span>Sign in using Google</span>
+				  <span>Google</span>
 					 
 				  </GoogleLogin>
 					<br/><br/>
@@ -125,6 +126,8 @@ const Login = ({ login, isAuthenticated }) => {
 				cssClass= "my-facebook-button-class"
 				icon="fa-facebook "
 				/>
+        </div>
+      
                 </form>
               </div>
             </div>

@@ -160,6 +160,8 @@ export default class LandingOrg extends Component {
                         className="btn btn-info"
                           style={{
                             height:"35px",
+                            backgroundColor:"lightBlue",
+                            border:"none",
                             fontSize:"1rem",
                             display:
                               event.status != "Cancelled" ? "block" : "none"
@@ -178,7 +180,7 @@ export default class LandingOrg extends Component {
                             });
                           }}
                         >
-                          Cancel Event
+                          Cancel
                         </button>
                       </form>
                     </td>

@@ -160,17 +160,13 @@ const EditProfile = ({
                       </div>
                   
                     <div className="col-6">
-                    
-                  <input type="submit"    style={{
+                    <center>
+                  <input type="submit"    
                   
-                      height: "35px",
-                      marginTop:"20px",
-                      width: "30%",
-                      backgroundColor: "#17a2b8",
-                      fontSize:"1.2rem",
-                      color:"black"
+                  style={{textALign:"center",marginLeft:"420px",width:"120px",backgroundColor:"lightBlue", height:"40px"}}
                       
-                    }} className="btn btn-info" />
+                     />
+                     </center>
                   </div>
                   {/* <div className="col-6">
                   <Link className="btn btn-info" style={{marginLeft:"650px",width:"100px", height:"30px"}} to="/dashboard">
