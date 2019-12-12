@@ -163,24 +163,7 @@ export default class EventInformation extends Component {
         </div>
     </div> 
     <div class="event-page-content__hype">
-        <div class="event-page-countdown">
-            <div class="event-countdown">
-                <div class="event-countdown__time">
-                    <p class="countdown-number" style={{color:"black"} }><FontAwesomeIcon icon={faChair} /> </p>
-                    <span class="countdown-number">Event Capacity: {this.state.capacity}</span>
-                    
-                </div>
-                
-            </div>
-        </div>
-        <div class="event-recommendations">
-            
-        </div>
-    </div> 
-</div>   
-  </div>
-  <center>
-       <div style={{ height: "50vh", width: "50%" }}>
+     
          <GoogleMapReact
            bootstrapURLKeys={{
              key: "AIzaSyCjKLovvz4CotGbAeqITJ6yAzCNKkEQrSI"
@@ -194,9 +177,23 @@ export default class EventInformation extends Component {
              text={this.state.name}
            />
          </GoogleMapReact>
-         <h3 style={{textAlign:"center", padding: "20px"}}>Local Address: {this.state.address}</h3>
          
-       </div>
+       
+                    
+                
+                
+            
+        
+        <div class="event-recommendations">
+            
+        </div>
+    </div> 
+</div>   
+  </div>
+  <center>
+  <h3 style={{textAlign:"center", padding: "20px"}}>Local Address: {this.state.address}</h3>
+  <p class="countdown-number" style={{color:"black"} }><FontAwesomeIcon icon={faChair} /> </p>
+                    <span class="countdown-number">Event Capacity: {this.state.capacity}</span>
      </center>
      
   </div> 
