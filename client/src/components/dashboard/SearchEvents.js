@@ -12,9 +12,15 @@ import Kun from "../../img/Kun.jpg";
 import Navbar from "../layout/Navbar";
 import video1 from "../../img/vid1.gif"
 import party from '../../assets/party.png'
-import pool from '../../assets/pool.png'
+// import pool from '../../assets/pool.png'
+import ball from '../../assets/dodgeball.jpg'
+import people from '../../assets/people.jpg'
+import trek from '../../assets/trek.jpg'
+// import  eat from '../../assets/eat.jpg'
+import sport from '../../assets/sport.jpg'
+import bonfire from '../../assets/bonfire.jpg'
 import italy from '../../assets/italy.png'
-const imgArray = [party, pool, italy]
+const imgArray = [party, italy,ball,people,trek,sport,bonfire]
 
 const Events = props => (
   <div className="small-card inline-div mx-1">
@@ -25,7 +31,7 @@ const Events = props => (
           {" "}
           <Link to={"/edit/" + props.events._id}>
             {/* <img style={{ width: "230px", height: "250px" }} src={Snippet} />{" "} */}
-            <img style={{ width: "230px", height: "250px", borderRadius:"10px" }} src={imgArray[Math.floor((Math.random() * 2) )]} />{" "}
+            <img style={{ width: "230px", height: "250px", borderRadius:"10px" }} src={imgArray[Math.floor((Math.random() * 7) )]} />{" "}
             {/* <img style={{ width: "230px", height: "250px" }} src={props.events.picture} />{" "} */}
             <div class="card-img-overlay">
           <button

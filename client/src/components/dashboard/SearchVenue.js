@@ -12,7 +12,12 @@ import party from '../../assets/party.png'
 import pool from '../../assets/pool.png'
 import italy from '../../assets/italy.png'
 
-const imgArray = [party, pool, italy]
+import house2 from '../../assets/house2.jpg'
+import house from '../../assets/house.jpg'
+import home from '../../assets/home.jpg'
+import wedding from '../../assets/Wedding.png'
+
+const imgArray = [party, pool, italy,house,house2,home,wedding]
 
 // const ia = [
 //   {
@@ -43,7 +48,7 @@ const Venues = props => (
         <div className="card_image" style={{ width: "220px" }}>
           {" "}
           <Link to={"/edits/" + props.events._id}>
-            <img style={{ width: "230px", height: "250px" }} src={imgArray[Math.floor((Math.random() * 2) )]} />{" "}
+            <img style={{ width: "230px", height: "250px" }} src={imgArray[Math.floor((Math.random() * 6) )]} />{" "}
             {/* <img style={{ width: "230px", height: "250px" }} src={findImg(props.events.event_type)} />{" "} */}
           </Link>
         </div>
