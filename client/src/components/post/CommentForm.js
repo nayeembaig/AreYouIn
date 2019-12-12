@@ -41,9 +41,7 @@ const CommentForm = ({ postId, addComment }) => {
           />
         
         {/* <input type='submit' className='btn btn-dark my-1' value='Submit' /> */}
-        <input type="submit" value="Submit"   style={{
-                    
-                  }} className="btn btn-info w-25" />
+        <input type="submit" value="Submit"    style={{backgroundColor:"lightblue"}} className="btn btn-info w-25" />
                   </div>
       </form>
       

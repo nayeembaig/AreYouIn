@@ -215,7 +215,7 @@ input[type="text"].message-input {
 }
 
 .username-input {
-  width: 100%;
+  width: 80%;
 }
 
 input[type="text"]:focus {

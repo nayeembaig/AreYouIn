@@ -11,15 +11,15 @@ const PostForm = ({ addPost }) => {
       <Navbar></Navbar>
       <div
         class="jumbotron text-center"
-        style={{ backgroundColor: "lightblue" }}
+        style={{ backgroundColor: "lightblue", fontFamily:"Raleway" }}
       >
-        <h2>Welcome to PlayGround - A Discussion Forum</h2>
+       
         {/* <hr style={ {:"1rem"}} class="my-4"/> */}
-        <p><bold>Please Read the below guidelines before posting </bold> </p>
+        <h3><bold>Please Read the below guidelines before posting </bold> </h3>
       <h4>1. Thread titles should be relevant to the content in the thread.</h4>  
       <h4>2. Excessive CAPS and symbols (e.g. !?#;~*) and "decorated" text that distort the Forum page, should be avoided</h4>  
       <h4>3. If there is an active thread, please post your comment there instead of creating another on the same topic.</h4>  
-      <h4>4. reads involving sexual subjects or topics  are not appropriate and will be subject to closure.</h4>  
+      <h4>4. Theads involving sexual subjects or topics  are not appropriate and will be subject to closure.</h4>  
       <h4>5. Incase you'd like to know about a specific topic related to website navigation, please read the FAQ's first and see if your query was answered already!</h4>  
        
       </div>
@@ -58,7 +58,8 @@ const PostForm = ({ addPost }) => {
                 ></textarea>
                 <input
                   type="submit"
-                  
+                  style={{backgroundColor:"lightblue"}}
+                
                   className="btn btn-info w-25"
                   value="Submit"
                 />

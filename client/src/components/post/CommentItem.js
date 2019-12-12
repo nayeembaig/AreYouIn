@@ -42,14 +42,14 @@ const CommentItem = ({
          </div>
          <div class="message-details">
            
-           <div class="message-date" style={{color:"black"}}>
+           <div class="message-date" style={{color:"black", border:"none"}}>
              {/* <span>  Posted on <Moment format='YYYY/MM/DD'>{date}</Moment></span> */}
            </div>
            {!auth.loading && user === auth.user._id && (
             <button
               onClick={() => deleteComment(postId, _id)}
               type='button'
-              className='btn btn-light'
+              
               
             >
              X

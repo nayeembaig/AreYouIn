@@ -93,7 +93,8 @@ const PostItem = ({
                     marginLeft: "630px",
                     color: "white",
                     backgroundColor: "lightblue",
-                    height:"30px"
+                    height:"30px",
+                    paddingBottom:"30px"
                   }}
                   onClick={() => addLike(_id)}
                   type="button"
@@ -103,7 +104,7 @@ const PostItem = ({
                   <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
                 </button>
                 <button
-                  style={{ color: "white", backgroundColor: "lightblue" , height:"30px"}}
+                  style={{ color: "white", paddingBottom:"30px",backgroundColor: "lightblue" , height:"30px"}}
                   onClick={() => removeLike(_id)}
                   type="button"
                   className="btn btn-light"
@@ -117,7 +118,8 @@ const PostItem = ({
                     color: "white",
                     border: "None",
                     backgroundColor: "lightblue",
-                    height:"30px"
+                    height:"30px",
+                    paddingBottom:"30px",
 
                   }}
                   className="btn btn-primary"
