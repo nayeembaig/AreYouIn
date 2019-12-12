@@ -201,7 +201,7 @@ const Dashboard = ({
                 
                     <button
                       type="button"
-                      style={{padding:"0px"}}
+                      style={{padding:"0px", fontSize:"1.5rem"}}
                       class="btn btn-danger"
                       onClick={() => deleteAccount()}
                     >

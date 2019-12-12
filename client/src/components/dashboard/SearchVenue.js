@@ -198,9 +198,9 @@ export default class SearchVenue extends Component {
                     value="Send"
                   > <span class="glyphicon glyphicon-search"></span></input> */}
 
-<button type="button" class="btn btn-default" style={{border:"None"}} value="Send">
+{/* <button type="button" class="btn btn-default" style={{border:"None"}} value="Send">
     <span class="glyphicon glyphicon-search" ></span>  
-  </button>
+  </button> */}
                 </form>
               </div>
 
@@ -225,7 +225,7 @@ export default class SearchVenue extends Component {
                        */}
                       <div class="mb-4">
                         <select
-                        style={{marginTop:"20px"}}
+                        style={{marginTop:"20px", marginLeft:"-5px"}}
                           class="custom-select"
                           id="inputGroupSelect01"
                           value={this.state.type}
@@ -240,6 +240,7 @@ export default class SearchVenue extends Component {
 
                       <div class="mb-4 ">
                         <select
+                        style={{marginLeft:"-5px"}}
                           class="custom-select"
                           id="inputGroupSelect01"
                           value={this.state.type}

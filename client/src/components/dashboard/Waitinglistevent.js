@@ -9,8 +9,13 @@ import "../../css/forms.css";
 import Carousel2 from "../layout/carouselvenue.js";
 import Snippet2 from '../../assets/snippet2.png';
 import "../../css/grid.css";
+import people from '../../assets/people.jpg'
+import party from '../../assets/party.png'
+
 import Snippet from '../../assets/snippet.png';
 import Carousel from "../layout/carousel.js";
+import Navbar from '../layout/Navbar';
+const imgArray = [people,party]
 
 const Events = props => (
   <div className="small-card inline-div mx-1">
@@ -21,7 +26,7 @@ const Events = props => (
           <Link to={"/edit/" + props.events._id}>
             <img
               style={{ width: "230px", height: "250px" }}
-              src={Snippet}
+              src={imgArray[Math.floor((Math.random() * 2) )]}
             />{" "}
           </Link>
         </div>
@@ -79,12 +84,15 @@ export default class Waitinglistevent extends Component {
   
   
   render() {
-    return (         
-        <div class='container'>
+    return (  
+      <div>   
+        <Navbar></Navbar>   
+        <br></br> 
+        <div class='container no-margin'>
 { this.exerciseList() }
 
         </div>
-     
+        </div>
     
      
      

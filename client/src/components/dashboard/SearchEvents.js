@@ -31,7 +31,7 @@ const Events = props => (
           {" "}
           <Link to={"/edit/" + props.events._id}>
             {/* <img style={{ width: "230px", height: "250px" }} src={Snippet} />{" "} */}
-            <img style={{ width: "230px", height: "250px", borderRadius:"10px" }} src={imgArray[Math.floor((Math.random() * 7) )]} />{" "}
+            <img style={{ width: "220px", height: "250px", borderRadius:"10px" }} src={imgArray[Math.floor((Math.random() * 7) )]} />{" "}
             {/* <img style={{ width: "230px", height: "250px" }} src={props.events.picture} />{" "} */}
             <div class="card-img-overlay">
           <button
@@ -212,6 +212,7 @@ export default class SearchEvents extends Component {
         >
           <div className="row">
             <div className="col">
+              <div className="row">
               <div className="container" style={{ marginTop: "4px" }}>
               <form class="search-container" onSubmit={this.onSubmit}>
                   <input
@@ -222,13 +223,14 @@ export default class SearchEvents extends Component {
                     name="searchme"
                     onChange={this.searchh}
                   ></input>
-          <button type="button" class="btn btn-default" style={{border:"None"}} value="Send">
+          {/* <button type="button" class="btn btn-default" style={{border:"None"}} value="Send">
     <span class="glyphicon glyphicon-search" ></span>  
-  </button>
+  </button> */}
                 </form>
+                </div>
               </div>
 
-              <div className="container " >
+              <div className="container  " >
                 <div className="row">
                   <div class="col-2 h-50 d-inline-block" style={{backgroundColor: "#EFF9FC"}}>
                     <p style={{marginTop:"10px", textAlign:"center"}}>Search Filter</p>
@@ -237,7 +239,7 @@ export default class SearchEvents extends Component {
                         class="custom-select"
                         id="inputGroupSelect01"
                         value={this.state.type}
-                        style={{marginTop:"40px"}}
+                        style={{marginTop:"40px", marginLeft:"-5px"}}
                         name="type"
                         onChange={this.searchfilter1}
                       >
@@ -251,6 +253,7 @@ export default class SearchEvents extends Component {
                     <div class="mb-4">
                       <select
                         class="custom-select"
+                        style={{marginTop:"40px",marginLeft:"-5px"}}
                         id="inputGroupSelect01"
                         value={this.state.type}
                         name="type"
@@ -264,6 +267,7 @@ export default class SearchEvents extends Component {
                     <div class="input">
                       <select
                         class="custom-select"
+                        style={{marginTop:"40px", marginLeft:"-5px"}}
                         id="inputGroupSelect01"
                         value={this.state.type}
                         name="location"

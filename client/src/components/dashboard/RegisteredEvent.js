@@ -8,9 +8,10 @@ import '../../css/buttons.css';
 import "../../css/forms.css";
 import Carousel2 from "../layout/carouselvenue.js";
 import Snippet2 from '../../assets/snippet2.png';
+import party from '../../assets/party.png'
 import "../../css/grid.css";
 import Snippet from '../../assets/snippet.png';
-import Carousel from "../layout/carousel.js";
+import  Carousel from "../layout/carousel.js";
 
 import Navbar from "../layout/Navbar";
 const Events = props => (
