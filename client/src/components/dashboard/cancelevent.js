@@ -89,15 +89,22 @@ export default class cancelevent extends Component {
      
     return (
     
-      <div>
+      <div style={{backgroundColor:"lightblue"}}>
           <Navbar></Navbar>
-        <h1>Please enter your email </h1>
+          <div className="container" style={{marginLeft:"300px" }}>
+        <h1 style={{textAlign:"center"}} >Please enter your email </h1>
      <form onSubmit ={this.onSubmit}> 
       <input type='text' value={this.state.email} placeholder='email' onChange ={this.searchh}></input>
+      <hr></hr>
+     
       <input type='text' value={this.state.activityname} placeholder='activityname' onChange ={this.changeac}></input>
+      <hr></hr>
       <input type='submit' className='bouton' value='confirm' ></input> 
+     
      </form>   
+    
      <p hidden ={this.state.showmessage}>You will recieve a cancel confimation email, please check your mail box </p>
+     </div>
      </div>
     )
   }

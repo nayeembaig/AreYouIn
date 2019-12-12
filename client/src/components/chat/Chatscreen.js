@@ -79,7 +79,7 @@ class Chatscreen extends Component {
           <ul className="chat-messages">
             <ChatSession messages={messages} />
           </ul>
-          <footer className="chat-footer">
+          <footer className="chat-footer" style={{backgroundColor:"lightBlue"}}>
             <form onSubmit={this.sendMessage} className="message-form">
               <input
                 type="text"

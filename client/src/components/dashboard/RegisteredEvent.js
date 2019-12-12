@@ -9,11 +9,15 @@ import "../../css/forms.css";
 import Carousel2 from "../layout/carouselvenue.js";
 import Snippet2 from '../../assets/snippet2.png';
 import party from '../../assets/party.png'
+import people from '../../assets/people.jpg'
+// import party from '../../assets/party.png'
 import "../../css/grid.css";
 import Snippet from '../../assets/snippet.png';
 import  Carousel from "../layout/carousel.js";
 
+
 import Navbar from "../layout/Navbar";
+const imgArray = [people,party]
 const Events = props => (
   <div className="small-card inline-div mx-1">
     <div className="main">
@@ -23,7 +27,7 @@ const Events = props => (
           <Link to={"/edit/" + props.events._id}>
             <img
               style={{ width: "230px", height: "250px" }}
-              src={Snippet}
+              src={imgArray[Math.floor((Math.random() * 2) )]}
             />{" "}
           </Link>
         </div>
@@ -31,7 +35,7 @@ const Events = props => (
           <h2 className="card_title">{props.events.name} </h2>
           <div className="row">
             <p className="card_text " style={{paddingLeft:"8rem", fontStyle:"Clarendon Serif"}}>
-            90%  <i class="fas fa-heart fa-lg" style={{color:"#FF1493"}}> </i> | {props.events.location}     |     {props.events.age}
+             {props.events.location}     |     {props.events.age}
             </p>
             {/* <p className="card_text col-4">{props.events.location}</p>
 
@@ -128,12 +132,13 @@ export default class RegisteredEvent extends Component {
       <div>
       <Navbar></Navbar>   
         <div class='container'>
-          <p>Events</p>
+          <h2 style={{textAlign:"center"}}>Events</h2>
           
 { this.exerciseList() }
-<button class="btn btn-cta" href="#" ><Link to={'/cancel/'+ this.props.match.params.id}>cancel event</Link></button>
-<p>Venues</p>
+<h2  style={{textAlign:"center"}}>Venues</h2>
 {this.exerciseLists()}
+<button class="" style={{textDecoration:"none "}} href="#" ><Link to={'/cancel/'+ this.props.match.params.id}>Cancel your event</Link></button>
+
         </div>
      
         </div>

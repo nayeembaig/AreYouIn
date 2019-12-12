@@ -44,7 +44,7 @@ const Dashboard = ({
   ) : (
     <Fragment>
       <Navbar />
-      <div class="">
+      <div class="" style={{backgroundColor:"white"}}>
         <div class="">
           <div class="welcome__block">
             <div>

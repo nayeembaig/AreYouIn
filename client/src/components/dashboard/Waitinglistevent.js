@@ -34,7 +34,7 @@ const Events = props => (
           <h2 className="card_title">{props.events.name} </h2>
           <div className="row">
             <p className="card_text " style={{paddingLeft:"8rem", fontStyle:"Clarendon Serif"}}>
-            90%  <i class="fas fa-heart fa-lg" style={{color:"#FF1493"}}> </i> | {props.events.location}     |     {props.events.age}
+           | {props.events.location}     |     {props.events.age}
             </p>
             {/* <p className="card_text col-4">{props.events.location}</p>
 

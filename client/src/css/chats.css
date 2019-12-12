@@ -156,6 +156,7 @@ h4 {
 .message span {
   display: block;
   text-align: left;
+  font-size: small;
 }
 
 .message .user-id {
@@ -163,11 +164,11 @@ h4 {
 }
 
 .message-form {
-  border-top: 1px solid #ccc;
+  /* border-top: 1px solid #ccc; */
 }
 
 .message-form, .message-input {
-  width: 100%;
+  /* width: 80%; */
   margin-bottom: 0;
 }
 
