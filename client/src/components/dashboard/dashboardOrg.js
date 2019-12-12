@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "../../css/dashb.css";
-import Ishita from "../../img/Ishita.jpg";
+import host from "../../img/host.jpg";
 import Calendar from "../../assets/calendar.png";
 import Navbar from "../../components/layout/Navbar";
 import Form from "../../assets/formo.png";
@@ -39,7 +39,7 @@ const DashboardOrg = ({
   
       <div class="welcome__block">
         <div>
-          <img src={Ishita} style={{ width: "128px", height: "128px" }} />
+          <img src={host} style={{ width: "128px", height: "128px" }} />
           <div>
     
             <h1>Welcome back, {user && user.name}</h1>

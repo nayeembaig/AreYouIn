@@ -174,7 +174,8 @@ export default class SearchVenue extends Component {
 
           <div className="row">
             <div className="col">
-              <div className="container" style={{ marginTop: "2px" }}>
+              <div className="container" style={{ marginTop: "4px" }}>
+                <br></br>
                 <form class="search-container" onSubmit={this.onSubmit}>
                   <input
                     type="text"

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";    
+import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick-theme.css";
 import Item1 from "../../assets/venue1.png";
 import Item2 from "../../assets/venue2.png";
@@ -30,51 +31,58 @@ export default class CenterMode extends Component {
        
         <Slider {...settings}>
           <div>
+          <Link to={"/edits/5dde96151c9d44000013a461"}>
             <img
                                 src={Item1}
                                 style={{width:"350px", marginLeft:"1px",borderRadius:"20px", marginRight:"5px"}}
                                 alt="..."
-                              />
+                              /></Link>
           </div>
           <div>
+          <Link to={"/edits/5dde96151c9d44000013a461"}>
           <img
                                 src={Item2}
                                 style={{width:"350px", marginLeft:"1px",borderRadius:"20px", marginRight:"5px"}}
                                
                                 alt="..."
-                              />
+                              /></Link>
           </div>
           <div>
+          <Link to={"/edits/5dde96151c9d44000013a461"}>
           <img
                                 src={Item3}
                                 style={{width:"350px", marginLeft:"1px",borderRadius:"20px", marginRight:"5px"}}
                                
                                 alt="..."
-                              />
+                              /></Link>
           </div>
           <div>
+          <Link to={"/edits/5dde96151c9d44000013a461"}>
           <img
                                 src={Item4}
                                 style={{width:"350px", marginLeft:"1px",borderRadius:"20px", marginRight:"5px"}}
                                
                                 alt="..."
-                              />
+                              /></Link>
           </div>
           <div>
+          <Link to={"/edits/5dde96151c9d44000013a461"}>
           <img
                                 src={Item5}
                                 style={{width:"350px", marginLeft:"1px",borderRadius:"20px", marginRight:"5px"}}
                                
                                 alt="..."
                               />
+                              </Link>
           </div>
           <div>
+          <Link to={"/edits/5dde96151c9d44000013a461"}>
           <img
                                 src={Item6}
                                 style={{width:"350px", marginLeft:"1px",borderRadius:"20px", marginRight:"5px"}}
                                
                                 alt="..."
-                              />
+                              /></Link>
           </div>
         </Slider>
       </div>

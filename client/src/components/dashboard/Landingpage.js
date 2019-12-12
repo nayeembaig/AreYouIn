@@ -229,10 +229,10 @@ export default class Landingpage extends Component {
           <h3  style={{textAlign:"center"}}>Places to Visit </h3>
           <Carousel2></Carousel2>
           <br></br>
-          <h3  style={{textAlign:"center"}}> Bloomington Events</h3>
+          {/* <h3  style={{textAlign:"center"}}> Bloomington Events</h3>
           <div class="container">
             {this.exerciseListb()}
-            </div>
+            </div> */}
           {/* <br></br> <h4>All Events </h4> */}
           {/* <div class="container">{this.exerciseList()}</div>
           <div class="container">{this.exerciseLists()}</div> */}

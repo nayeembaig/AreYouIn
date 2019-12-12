@@ -198,15 +198,15 @@ export default class SearchEvents extends Component {
     return (
       <div>
         <Navbar></Navbar>
-        <div>
-        <Carousel style={{ marginTop: "-20px" }}></Carousel>
+        <div style={{ marginTop: "-10px" , marginBottom: "20px"}}>
+        <Carousel ></Carousel>
         </div>
         <div
        
         >
           <div className="row">
             <div className="col">
-              <div className="container" style={{ marginTop: "2px" }}>
+              <div className="container" style={{ marginTop: "4px" }}>
               <form class="search-container" onSubmit={this.onSubmit}>
                   <input
                     type="text"

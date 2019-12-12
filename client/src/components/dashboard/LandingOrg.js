@@ -129,6 +129,7 @@ export default class LandingOrg extends Component {
                 <th>
                   Event/Venue
                 </th>
+                <th >Type</th>
                 <th >Capacity</th>
                 <th >Registered</th>
                 <th >Status</th>
@@ -141,6 +142,7 @@ export default class LandingOrg extends Component {
                 <tbody>
                   <tr>
                     <td style={{  }}>{event.name}</td>
+                    <td>Recreational</td>
                     <td style={{}}>{event.Capacity}</td>
                     <td style={{ width: "100px" }}>{event.attendees.length}</td>
                     <td style={{ width: "100px" }}> {event.status}</td>

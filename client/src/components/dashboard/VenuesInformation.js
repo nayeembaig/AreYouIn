@@ -4,6 +4,8 @@ import axios from 'axios';
 import GoogleMapReact from 'google-map-react';
 import StarRatings from 'react-star-ratings';
 import { userInfo } from 'os';
+import host from "../../img/host.jpg";
+
 import Navbar from "../layout/Navbar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGem, faStickyNote, faChair } from  '@fortawesome/free-solid-svg-icons';
@@ -49,7 +51,7 @@ export default class VenuesInformation extends Component {
   changeRating( newRating, name ) {
     var UserID = localStorage.user_id
 
-    console.log(this.state.UsersWhoRated)
+    // console.log(this.state.UsersWhoRated)
     if (!(this.state.UsersWhoRated.indexOf(UserID) >= 0)){
       var newRatingRaw = (this.state.RatingRaw + newRating)
       var newRatingRound = (newRatingRaw)/(this.state.UsersWhoRated.length + 1)
@@ -89,9 +91,9 @@ export default class VenuesInformation extends Component {
   }
   
   exerciseList() {
-    console.log(this.state.name)
-    console.log(this.state.longitude)
-    console.log(this.state.latitude)
+    // console.log(this.state.name)
+    // console.log(this.state.longitude)
+    // console.log(this.state.latitude)
     return this.state.events.map(currentexercise => {
       return <Events events={currentexercise} key={currentexercise._id}/>;
     })
@@ -116,7 +118,7 @@ export default class VenuesInformation extends Component {
       <div>
   
         <Navbar></Navbar>
-<div style={{padding: "1rem"}}>
+<div >
     <div class="event-page-header">
     <div class="event-page-header__poster event-poster-image2">
         <div class="event-poster-image-overlay overlay-gradient-frombottom">
@@ -135,7 +137,17 @@ export default class VenuesInformation extends Component {
                     </li>
                 </ul>
 
-                <div>
+               
+                
+            </div>
+        </div>
+    </div> 
+    <div class="event-page-header__context">
+        <div class="event-page-title">
+            <Link class="event-category-tag" to={'/SearchVenue/'}>See Other Venues</Link>
+            <div className="row">
+            <h2>{this.state.name}</h2>
+            <div style={{marginLeft:"60px"}}>
                 <StarRatings
                   rating={this.state.Rating}
                   starRatedColor="red"
@@ -145,22 +157,19 @@ export default class VenuesInformation extends Component {
                   starSpacing="5px"
                   />
                 </div>
-                
-            </div>
-        </div>
-    </div> 
-    <div class="event-page-header__context">
-        <div class="event-page-title">
-            <Link class="event-category-tag" to={'/SearchVenue/'}>See Other Venues</Link>
-            <h1>{this.state.name}</h1>
+                </div>
+            <hr></hr>
+            <p>{this.state.information}</p>
         </div>
         <center>
         <div class="event-page-cta">
-            <p class="txt-bold">Many Great Times for One Great Place:</p>
+        <p>{this.state.information}</p>
+        <p style={{textAlign:"center", padding: "20px"}}>Local Address: {this.state.address}</p>
+            <p class="">Pick Your Slot:</p>
             <div class="event-page-cta__action-bar">
             
         <form style={{fontSize:"2rem", color:"white"}} onSubmit={this.onSubmit}>
-        <select style={{fontSize:"2rem", padding: ".6rem", height: "40px"}} value={this.state.Timeslot1} className='input2' name='timeslot' onChange={this.onChange}>
+        <select className='input2' style={{ border:"none",width: "150px",height:"35px", marginBottom:"10px" }}value={this.state.Timeslot1} className='input2' name='timeslot' onChange={this.onChange}>
         <option value='0'>Select Timeslot</option>
           <option value={this.state.TimeslotOne}>{this.state.TimeslotOne}</option>
           <option value={this.state.TimeslotTwo}>{this.state.TimeslotTwo}</option>
@@ -176,18 +185,24 @@ export default class VenuesInformation extends Component {
 </div> 
 <div class="event-page-content">
     <div class="event-page-content__description">
-        <div class="event-page-description">
-        <h2 class="txt-bold" style={{textAlign:"center", color:"black"}}><FontAwesomeIcon icon={faStickyNote} /> Venue Description</h2>
-            <p>{this.state.information}
-            </p>
-        </div>
-    </div> 
-    
-</div>   
+    <div class="event-page-description">
+      <div class="card mb-3" style={{maxWidth:"540px"}}>
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src={host} class="card-img" />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h3 class="card-title">About the Host <i style={{color:"skyBlue"}}class="fas fa-check-square"></i></h3>
+        <p class="card-text" style={{padding:"2px"}}>Hey everyone, Ishita here. From here on out I will be your main point of contact for your adventure! We like to offer outside-the-box travel experiences, not stuffy off-the-shelf tours.</p>
+       </div>
+      </div>
+    </div>
   </div>
-  
-    <center>
-        <div style={{ height: '50vh', width: '50%' }}>
+  </div>
+    </div> 
+    <div className="event-page-content__hype">
+        <div style={{ height: '50vh', width: '80%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyCjKLovvz4CotGbAeqITJ6yAzCNKkEQrSI' }}
           center={{lat:this.state.latitude,lng:this.state.longitude}}
@@ -201,8 +216,14 @@ export default class VenuesInformation extends Component {
           />
         </GoogleMapReact>
       </div>
-      <h3 style={{textAlign:"center", padding: "20px"}}>Local Address: {this.state.address}</h3>
-    </center>
+  
+</div>
+</div>   
+  </div>
+ 
+    
+     
+  
     </div>
 
     )
