@@ -26,7 +26,7 @@ const Login = ({ login, isAuthenticated }) => {
 
   if (isAuthenticated) {
     if (localStorage.type_of_user === "Organizer") {
-      return <Redirect to="/dashboardOrg" />;
+      return <Redirect to="/dashboardOr g" />;
     } else {
       console.log(localStorage.type_of_user);
       return <Redirect to="/dashboard" />;
@@ -104,23 +104,26 @@ const Login = ({ login, isAuthenticated }) => {
 		
 <br></br>
 				  <div className="row" style={{marginLeft:"40px"}}>
+            <div >
 				  <GoogleLogin
+          style={{theme:"dark"}}
           
 				  clientId="279742822832-ruqqjhue6gobnbjl3nc6dclbq7gvht7r.apps.googleusercontent.com"
 				  //googleClientId="279742822832-ruqqjhue6gobnbjl3nc6dclbq7gvht7r.apps.googleusercontent.com"
 				  onSuccess={responseGoogle}
 		
-				  className="btn btn-outline-danger mt-10"
+				  // className="btn btn-outline-danger mt-10"
 				  >
-				  <span>Google</span>
+				  <span >Google Login</span>
 					 
 				  </GoogleLogin>
+          </div>
 					<br/><br/>
 				  <FacebookLogin
 				appId="2439972026111073"
 				autoLoad={false}
 				fields="name,email,picture"
-				/*className="btn btn-outline-danger mt-4" */
+				className="btn btn-outline-danger mt-4" 
 				data-size="medium"
 				callback={(response)=>responseFacebook(response)}
 				cssClass= "my-facebook-button-class"

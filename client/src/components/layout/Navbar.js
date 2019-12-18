@@ -26,6 +26,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <a
           class="nav-link dropdown-toggle"
           href="#"
+          style={{zIndex:"999"}}
           id="navbarDropdownMenuLink"
           data-toggle="dropdown"
           aria-haspopup="true"
@@ -49,11 +50,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           </li>
           <li>
             <a>
-              <Link to="/terms">Terms</Link>
+              <Link to="/terms" style={{zIndex:"999"}}>Terms</Link>
             </a>
           </li>
 
-          <li>
+          <li style={{zIndex:"999"}}>
             <a
               class="dropdown-item navbar-dowpdown-a"
               onClick={logout}
@@ -185,7 +186,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   return (
-    <nav className="navbar-my">
+    <nav className="navbar-my" >
       {
         <a class="navbar-brand" style={{}} class="img-responsive" href="#">
           <Link to="/">

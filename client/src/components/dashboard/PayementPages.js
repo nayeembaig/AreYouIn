@@ -24,7 +24,7 @@ export default class PaymentPages extends Component {
            
             <div class="form-body">
             
-              <input type="text" style={{width:"250px"}} className="card-number" placeholder="Card Number"/>
+              <input type="text" style={{widgth:"250px"}} className="card-number" placeholder="Card Number"/>
            
              
               <div class="date-field">
